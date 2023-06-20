@@ -1,12 +1,19 @@
-import './App.css';
-import Homepage from './components/Homepage/Homepage';
+import React from "react";
+import Navbar from "./components/common/Navbar";
+import { Switch, Route } from "react-router-dom";
+import Project from "./components/project/Project";
 
-function App() {
+
+const App = () => {
   return (
-    <div className="App">
-      <Homepage/>
-    </div>
+    <Switch>
+      <Route exact path="/">
+        <Navbar/>
+      </Route>
+      <Route exact path="/create">
+        <Project/>
+      </Route>
+    </Switch>
   );
-}
-
+};
 export default App;
