@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "./components/common/navbar/Navbar";
 import { Switch, Route } from "react-router-dom";
-import Project from "./components/project/Project";
+import Project from "./components/createproject/CreateProject";
 
 
 const App = () => {
