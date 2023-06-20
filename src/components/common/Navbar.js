@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import "./Sidebar.css";
 
-const Navbar = () => {
+const Navbar = props => {
   return (
-    <div>Navbar</div>
-  )
-}
-
-export default Navbar
+    <header>
+      {/* <button onClick={props.onClick}>Click Me!</button> */}
+      Navbar
+    </header>
+  );
+};
+export default Navbar;
