@@ -7,7 +7,7 @@ function Backlog() {
     <>
       <div>Hello Guys, Here Navbar will come</div>
       <BacklogUpperChild projectName={"Accolite JIRA"}/>
-      <BacklogLowerChild />
+      <BacklogLowerChild/>
     </>
   )
 }
