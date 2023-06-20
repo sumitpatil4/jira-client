@@ -23,30 +23,30 @@ const Sidebar = (props) => {
           <button className="project-name">Megha</button>
 
           <Link to='/roadmap'>
-          <button className="roadmap">
-            <i class="fa-solid fa-bars-staggered"></i> &nbsp; Roadmap
-          </button>
+            <button className="roadmap">
+              <i class="fa-solid fa-bars-staggered"></i> &nbsp; Roadmap
+            </button>
           </Link>
-          
-          
-            <Link to='/backlog'>
-            <button className="backlog">
-            <i class="fa-solid fa-list-check"></i> &nbsp; Backlog 
-          </button>
-            </Link>
 
-            <Link to='/'>
+
+          <Link to='/backlog'>
+            <button className="backlog">
+              <i class="fa-solid fa-list-check"></i> &nbsp; Backlog
+            </button>
+          </Link>
+
+          <Link to='/'>
             <button className="board">
-            <i class="fa-solid fa-bars-staggered"></i> &nbsp; Board
-          </button>
-            </Link>
-         
-         <Link to='/setting'>
-         <button className="setting">
-            <i class="fa-solid fa-gear"></i> &nbsp; Project Settings
-          </button>
-         </Link>
-          
+              <i class="fa-solid fa-bars-staggered"></i> &nbsp; Board
+            </button>
+          </Link>
+
+          <Link to='/setting'>
+            <button className="setting">
+              <i class="fa-solid fa-gear"></i> &nbsp; Project Settings
+            </button>
+          </Link>
+
         </div>
       </div>
     </>
