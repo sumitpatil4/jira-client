@@ -1,6 +1,6 @@
 import './App.css';
 import Backlog from './components/Backlog/Backlog';
-import Homepage from './components/Homepage/Homepage';
+// import Homepage from './components/Homepage/Homepage';
 
 function App() {
   return (
