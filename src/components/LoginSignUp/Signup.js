@@ -4,7 +4,10 @@ import { AiOutlineUser, AiOutlineMail, AiOutlineLock } from "react-icons/ai";
 import { Button, Stack } from "@mui/material";
 import {FaUserAlt} from "react-icons/fa";
 import signuplogo from '../../Images/signuplogo.png';
+import accoliteLogo from "../../Images/accolitedigital.png"
+
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 
 
@@ -106,10 +109,11 @@ const Signup = () => {
         <div className="signup-body">
             <div className="signup-static">
                 <div className="signup-img">
-                    <img src={signuplogo} alt="signuplogo" className="signup-image" />
+                    <img src={accoliteLogo} alt="signuplogo" className="signup-image" />
                 </div>
                 <div className="signup-login-redirect">
-                    <span>I am already a member</span>
+                   <Link to="#" >I am already a member</Link>
+                    
                 </div>
             </div>
         </div>

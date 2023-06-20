@@ -1,12 +1,13 @@
 import React,{useState} from "react";
 import "../LoginSignUp/login.css";
 import "./signup.css";
-import Signup from "./Signup";
+
 import { Button, Stack } from "@mui/material";
-import { AiOutlineUser, AiOutlineMail, AiOutlineLock } from "react-icons/ai";
-import { Link, useNavigate } from "react-router-dom";
+import { AiOutlineMail, AiOutlineLock } from "react-icons/ai";
+import { Link } from "react-router-dom";
 import accoliteLogo from "../../Images/accolitedigital.png"
 import axios from "axios";
+
 
 
 const Login = () => {
@@ -34,7 +35,11 @@ const Login = () => {
     return (
         <div className="login-container">
             <div className="login-image">
+                <div className="login-static">
                 <img src={accoliteLogo} alt="accolitelogo" className="login-img"/>
+                <Link href="/signup">New User ?</Link>
+                </div>
+
             </div>
 
             <div className="login-cre">
@@ -68,8 +73,7 @@ const Login = () => {
                                 autoFocus />
                         </div>
 
-                        <Link href="/signup">New User ?</Link>
-
+                        
                         <Stack spacing={4} direction={"row"} sx={{ marginTop: '5px'}}>
               <Button variant='contained' type="submit">Login</Button>
               </Stack>
