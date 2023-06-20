@@ -65,6 +65,17 @@
   width: 90%;
   border: none;
   border-radius: 2px;
-  margin-bottom: 20px;
+  margin-top: 20px;
   color: white;
+  cursor:pointer;
+}
+
+.login-cre a{
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+.login-cre a:hover{
+    text-decoration:none;
+    cursor:pointer;
 }
