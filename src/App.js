@@ -1,5 +1,5 @@
 import './App.css';
-import Backlog from './components/BackLogPages/Backlog';
+import Backlog from './components/Backlog/Backlog';
 function App() {
   return (
     <div className="App">
