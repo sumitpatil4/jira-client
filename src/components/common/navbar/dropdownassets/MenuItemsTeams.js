@@ -1,4 +1,4 @@
-export const MenuItems2 = [
+export const MenuItemsTeams = [
     {
       title: 'Invite People',
       path: '/invite',

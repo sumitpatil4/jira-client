@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Navbar from "../../components/common/Navbar";
+import Navbar from "../common/navbar/Navbar";
 
 export default function Project() {
     const [name, setName] = useState("");

@@ -1,4 +1,4 @@
-export const MenuItems1 = [
+export const MenuItemsProject = [
     {
       title: 'Recent',
       path: '/recents',

@@ -1,4 +1,4 @@
-export const MenuItems = [
+export const MenuItemsYourWork = [
     {
       title: 'Assigned to me',
       path: '/assigned',

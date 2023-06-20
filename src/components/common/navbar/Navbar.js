@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { Button } from './Button';
+import { Button } from './dropdownassets/Button';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
-import Dropdown from './Dropdown';
-import Dropdown1 from './Dropdown1';
-import Dropdown2 from './Dropdown2';
+import Dropdown from './dropdownassets/DropdownYourWork';
+import Dropdown1 from './dropdownassets/DropdownProject';
+import Dropdown2 from './dropdownassets/DropdownTeams';
 
 function Navbar() {
   const [click, setClick] = useState(false);
