@@ -7,6 +7,7 @@ import { AiOutlineMail, AiOutlineLock } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import accoliteLogo from "../../Images/accolitedigital.png"
 import axios from "axios";
+import GoogleLogin from "./GoogleSignIn";
 
 
 
@@ -37,7 +38,7 @@ const Login = () => {
             <div className="login-image">
                 <div className="login-static">
                 <img src={accoliteLogo} alt="accolitelogo" className="login-img"/>
-                <Link href="/signup">New User ?</Link>
+                
                 </div>
 
             </div>
@@ -73,15 +74,21 @@ const Login = () => {
                                 autoFocus />
                         </div>
 
-                        
+                        <Link href="/signup">New User ?</Link>
                         <Stack spacing={4} direction={"row"} sx={{ marginTop: '5px'}}>
+                        
               <Button variant='contained' type="submit">Login</Button>
               </Stack>
                     </form>
-                </div>
-
+                
+                    <div className="google-login">
+                    <h2>OR</h2>
+                    <GoogleLogin/>
+                    </div>
 
             </div>
+            
+                </div>
         </div>
     );
 };

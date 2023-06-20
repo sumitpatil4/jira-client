@@ -96,3 +96,15 @@
     text-decoration:none;
     cursor:pointer;
 }
+.google-login{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  margin-top: 1%;
+}
+#LoginButton{
+  border: 1px solid black;
+  border-radius: 5px;
+}

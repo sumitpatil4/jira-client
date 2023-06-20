@@ -63,7 +63,11 @@
     width: 90%
   }
   .signup-login-redirect{
-    margin-top: 5%;
+    margin-top: 2%;
     cursor: pointer;
-    text-decoration: underline;
+    
   }
+  .signup-login-redirect a{
+    text-decoration: none;
+  }
+ 

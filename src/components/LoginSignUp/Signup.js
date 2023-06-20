@@ -101,6 +101,10 @@ const Signup = () => {
               <Stack spacing={2} direction={"row"} sx={{ marginTop: '20px' }}>
               <Button variant='contained' type="submit">Register</Button>
               </Stack>
+              <div className="signup-login-redirect">
+                   <Link to="#" >I am already a member</Link>
+                    
+                </div>
             </form>
             {message && <span>{message}</span>}
           </div>
@@ -111,10 +115,7 @@ const Signup = () => {
                 <div className="signup-img">
                     <img src={accoliteLogo} alt="signuplogo" className="signup-image" />
                 </div>
-                <div className="signup-login-redirect">
-                   <Link to="#" >I am already a member</Link>
-                    
-                </div>
+                
             </div>
         </div>
       </div>
