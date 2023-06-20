@@ -2,17 +2,25 @@
   border: 1px solid black;
   display: flex;
   justify-content: space-around;
-  height: 99vh;
+  height: 88vh;
+  margin-top: 20px;
+  padding: 5px;
   align-items: center;
   column-gap: 10px;
+  margin: 25px 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px black;
 }
 
 .login-image {
-  border: 1px solid red;
   height: 85vh;
   width: 45vw;
+  display: contents;
 }
-
+.login-img{
+    
+    width: 40%;
+}
 .login-cre {
   /* border: 1px solid red; */
   height: 85vh;
@@ -29,7 +37,7 @@
   justify-self: center;
   height: 70vh;
   width: 65%;
-  margin-top: 10%;
+  margin-top: 2%;
 }
 
 .login-form .username {
@@ -45,11 +53,13 @@
 .icon{
     padding-top: 13px;
     size: 20px;
+    transform: translateY(-50%);
+    color: rgb(0, 0, 0);
 }
 
 .login-cre input {
   display: block;
-  padding: 15px 10px;
+  padding: 10px 10px;
   width: 80%;
   border: none;
   border-bottom: 1px solid black;
