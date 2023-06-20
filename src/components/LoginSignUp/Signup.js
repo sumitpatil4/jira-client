@@ -3,7 +3,7 @@ import "./signup.css";
 import { AiOutlineUser, AiOutlineMail, AiOutlineLock } from "react-icons/ai";
 import { Button, Stack } from "@mui/material";
 import {FaUserAlt} from "react-icons/fa";
-import signuplogo from './signuplogo.png';
+import signuplogo from '../../Images/signuplogo.png';
 import axios from "axios";
 
 
@@ -94,7 +94,7 @@ const Signup = () => {
                   required
                 />
               </div>
-              {/* <button type="submit">Submit</button> */}
+              
               <Stack spacing={2} direction={"row"} sx={{ marginTop: '20px' }}>
               <Button variant='contained' type="submit">Register</Button>
               </Stack>
