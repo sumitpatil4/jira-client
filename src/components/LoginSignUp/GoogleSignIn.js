@@ -13,8 +13,8 @@ const GoogleLogin = ({ onLoginSuccess }) => {
             google.accounts.id.renderButton(
                 document.getElementById("LoginButton"),
                 {
-                    theme: "outline",
-                    size: "large",
+                    theme: "dark", 
+        size: "larger"
                 })
         }, 500)
     }, [])
@@ -33,7 +33,7 @@ const GoogleLogin = ({ onLoginSuccess }) => {
 
     return (
         <div>
-            <div id="LoginButton"/>
+            <div id="LoginButton"   />
         </div>
     )
 }

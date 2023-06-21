@@ -7,7 +7,9 @@ import FirstPage from './components/IntroPage/infoPage';
 function App() {
   return (
     <div className="App">
-      <FirstPage/>
+      {/* <GoogleLogin/> */}
+      {/* <Login/> */}
+      <Signup/>
     </div>
   );
 }

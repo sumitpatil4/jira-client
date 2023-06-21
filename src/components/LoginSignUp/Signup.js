@@ -16,21 +16,36 @@ const Signup = () => {
     const[lname,setLname]=useState("")
     const[email,setEmail]=useState("")
     const[password,setPassword]=useState("")
+    const[Confpassword,setConfPassword]=useState("")
+    const [resPopUp,setResPopUp] = useState(false);
     const[message,setMessage]=useState("")
 
     const register=(e)=>{
+
         e.preventDefault();
+        if(password!==Confpassword){
+          setMessage("Password did not match")
+          setResPopUp(true);
+        }
+        else{
         const registerBody={fname:fname,lname:lname,email:email,password:password}
         axios.post(`http://localhost:4545/api/user/register`,{
-            fname:fname,lname:lname,email:email,password:password
+            fname:fname,
+            lname:lname,
+            email:email,
+            password:password
         })
-        .then((res)=>{
-           setMessage(res.data)
-           setTimeout(()=>{
-            setMessage("")
-           },5000)
+        .then((res)=>{ 
+          if(res.data.email===undefined){
+            setMessage(res.data);
+            setResPopUp(true);
+            console.log(res.data);
+          }
+          else{
+            console.log(res.data)
+          }
         })
-        
+      }
     }
 
   return (
@@ -94,6 +109,8 @@ const Signup = () => {
                   type="password"
                   placeholder="Repeat Your Password"
                   name="psw-repeat"
+                  value={Confpassword}
+                  onChange={(e)=>setConfPassword(e.target.value)}
                   required
                 />
               </div>
@@ -106,7 +123,6 @@ const Signup = () => {
                     
                 </div>
             </form>
-            {message && <span>{message}</span>}
           </div>
           </div>
         </div>
@@ -119,6 +135,23 @@ const Signup = () => {
             </div>
         </div>
       </div>
+
+      {resPopUp && <div className='popupContainer'>
+          <div className='popup-boxd'>
+            <div className='popupHeader'>
+              <h2>Opps Something went wrong!!</h2>
+            </div>
+              <div className='msgContainer'>
+                <p>{message}</p>
+              </div>
+              <div className='buttonsContainer'>
+                <button type="submit" className="submit-btn" onClick={() => setResPopUp(false)}>
+                  Ok
+                </button>
+              </div>
+          </div>
+        </div>}
+
     </div>
   );
 };
