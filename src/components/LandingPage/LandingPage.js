@@ -1,6 +1,7 @@
 import React from 'react'
 import Card from 'react-bootstrap/Card';
 import './LandingPage.css'
+import { NavLink } from 'react-router-dom/cjs/react-router-dom.min';
 export default function LandingPage() {
 
     const assignedProjects = [
@@ -18,10 +19,13 @@ export default function LandingPage() {
 
     function getCard(userId) {
         return (
+           
             <Card border="secondary" style={{ width: '17rem', height: '12.5rem' }}>
                 <div className='cardContainer'>
                     <Card.Body>
-                        <Card.Title className='ProjectName'>NameHere</Card.Title>
+                    <NavLink to = '/backlog'>
+                        <Card.Title className='ProjectName'>Accolite JIRA</Card.Title>
+                        </NavLink>
                         <div className='designationOfTheUser'>
                             designation here
                         </div>
@@ -44,6 +48,7 @@ export default function LandingPage() {
                     </Card.Body>
                 </div>
             </Card>
+            
         );
     }
 

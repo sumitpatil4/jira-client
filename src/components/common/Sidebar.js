@@ -35,7 +35,7 @@ const Sidebar = (props) => {
             </button>
           </Link>
 
-          <Link to='/'>
+          <Link to='/board'>
             <button className="board">
               <i class="fa-solid fa-bars-staggered"></i> &nbsp; Board
             </button>

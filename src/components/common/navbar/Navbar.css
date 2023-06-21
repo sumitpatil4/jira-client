@@ -8,7 +8,7 @@
   }
   
   .navbar-logo {
-    background: -webkit-linear-gradient(#eee, rgb(5, 5, 5));
+    background: -webkit-linear-gradient(#7a7dff, rgb(5, 5, 5));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     justify-self: start;

@@ -14,15 +14,20 @@ function App() {
 
   return (
     <>
-      <Navbar />
-      <Switch>
-        <Route exact path="/" component={LandingPage} />
-        <Route exact path="/board" component={Board} />        
-        <Route path="/roadmap" component={Roadmap} />
-        <Route path="/backlog" component={Backlog} />
-        <Route path="/setting" component={Setting} />
-        <Route path="/project" component={Project} />
-      </Switch>
+     <Switch>
+  <Route exact path="/" component={LandingPage} />
+  <Route>
+    <Navbar />
+    <Switch>
+      <Route exact path="/board" component={Board} />
+      <Route path="/roadmap" component={Roadmap} />
+      <Route path="/backlog" component={Backlog} />
+      <Route path="/setting" component={Setting} />
+      <Route path="/project" component={Project} />
+    </Switch>
+  </Route>
+</Switch>
+
 
     </>
   );
