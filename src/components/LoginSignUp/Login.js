@@ -1,7 +1,6 @@
 import React, { useState,useContext } from "react";
 import "../LoginSignUp/login.css";
 import "./signup.css";
-
 import { Button, Stack } from "@mui/material";
 import { AiOutlineMail, AiOutlineLock } from "react-icons/ai";
 import { Link } from "react-router-dom";
