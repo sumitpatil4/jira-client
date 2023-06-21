@@ -1,0 +1,12 @@
+.backlog-component{
+    display: flex;
+    margin-left: 5rem;
+    flex-direction: column;
+}
+
+.backlog-area{
+    background-color:rgb(237, 237, 206);
+    height: 100vh;
+    margin-left: 15.2%;
+    margin-top: 0%;
+}

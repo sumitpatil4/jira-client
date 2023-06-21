@@ -4,7 +4,7 @@ import AddPeople from './AddPeople';
 function BacklogUpperChild(props) {
   return (
     <>
-      <div className='main-container'>
+      <div className={(props.isOpen ? 'main-container-sidebar-open' : 'main-container-sidebar-not-open')}>
         <div className='first-container'>
          <p>Projects / {props.projectName} </p>
          <h4 className='backlog-subheading'>Backlog </h4>

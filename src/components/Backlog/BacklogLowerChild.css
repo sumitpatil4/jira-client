@@ -5,3 +5,12 @@
 .startsprint{
     margin-left: 80%;
 }
+
+.main-container-with-sidebar-open{
+    margin-left : 17.5%;
+    transition: margin-left 0.3s ease-in-out;
+}
+
+.main-container-without-sidebar-open{
+    transition: margin-left 0.3s ease-in-out;
+}
