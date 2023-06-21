@@ -1,0 +1,89 @@
+.info-page{
+    overflow:hidden;
+    height: 99vh;
+}
+
+.top-nav {
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color:aliceblue;
+
+}
+
+.logo {
+    padding: 10px;
+    height: 8vh;
+    width: 20vw;
+  }
+
+.login-btn{
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+    
+}
+.jira-img{
+    height: 7vh;
+}
+
+
+.second-bar {
+  height: 10vh;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.363);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  display:flex;
+  flex-direction:row;
+  margin-bottom: 3px;
+}
+
+.second-bar-logo{
+    padding: 10px;
+    width: max-content;
+    padding-left: 20px;
+}
+
+.second-bar-text{
+    display: flex;
+    align-items: center;
+}
+
+.second-bar-text h2{
+    color: black;
+    font-weight: normal;
+}
+
+.second-bar-options{
+    align-items: center;
+    padding-left: 20px;
+}
+
+.inner-container{
+    display: flex;
+    flex-direction:row;
+    height: 80vh;
+    background-image: linear-gradient(to right, white , lightblue, white)
+}
+
+.innerContainer-text{
+    width:38%;
+    padding-top: 90px;
+    padding-left: 40px;
+    line-height:0.8;
+}
+
+.innerContainer-text h3{
+    line-height: 2.5;
+}
+
+.innerContainer-image{
+    width: 70%;
+    padding-left: 40px;
+    padding-top: 70px;
+}
+.innerContainer-image img{
+    max-width: 100%;
+    max-height: 100%;
+}
