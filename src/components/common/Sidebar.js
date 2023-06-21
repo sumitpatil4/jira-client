@@ -2,7 +2,7 @@ import React from "react";
 import "./Sidebar.css";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import Backlog from "../Backlog";
+import Backlog from "../Backlog/Backlog";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 const Sidebar = (props) => {
@@ -35,7 +35,7 @@ const Sidebar = (props) => {
             </button>
           </Link>
 
-          <Link to='/'>
+          <Link to='/board'>
             <button className="board">
               <i class="fa-solid fa-bars-staggered"></i> &nbsp; Board
             </button>

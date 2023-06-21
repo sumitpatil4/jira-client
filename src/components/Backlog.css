@@ -1,5 +1,6 @@
 .backlog-component{
     display: flex;
+    margin-left: 5rem;
     flex-direction: column;
 }
 
