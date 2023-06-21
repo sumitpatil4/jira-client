@@ -1,7 +1,7 @@
-import React,{useState} from "react";
+import React,{useContext, useState} from "react";
 import "../LoginSignUp/login.css";
 import "./signup.css";
-
+import AuthContext from "../ContextAPI/AuthContext";
 import { Button, Stack } from "@mui/material";
 import { AiOutlineMail, AiOutlineLock } from "react-icons/ai";
 import { Link } from "react-router-dom";
@@ -13,6 +13,7 @@ import GoogleLogin from "./GoogleSignIn";
 
 const Login = () => {
 
+    const useContext=useContext(AuthContext);
     const[email,setEmail]=useState("")
     const[password,setPassword]=useState("")
     const[message,setMessage]=useState("")
