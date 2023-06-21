@@ -2,6 +2,8 @@ import React from 'react'
 import Sidebar from './common/Sidebar'
 import { useState } from 'react';
 import "./Backlog.css"
+import Navbar from './common/Navbar';
+
 
 export default function Backlog() {
   const [sidebarOpen, setSideBarOpen] = useState(true);
@@ -11,7 +13,7 @@ export default function Backlog() {
 
   return (
     <div className="backlog-component">
-    {/* <Navbar onClick={handleViewSidebar} /> */}
+    <Navbar onClick={handleViewSidebar} />
     <Sidebar isOpen={sidebarOpen} toggleSidebar={handleViewSidebar} />
     <div className="backlog-area">
      <h1>Hello I am Backlog Page</h1>

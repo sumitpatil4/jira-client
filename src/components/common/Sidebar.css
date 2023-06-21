@@ -1,7 +1,7 @@
 .features{
     display: flex;
     flex-direction: column;
-    background-color:beige;
+    background-color:rgb(255, 255, 255);
     width:15vw;
     font-size: larger;
     font-weight: 600;
@@ -19,31 +19,31 @@ button:hover{
   opacity: 0.8;
 }
 .project-name{
-    background-color: brown;
+    background-color: rgb(101, 100, 100);
     height: 5rem;
 }
 .roadmap{
     
-    background-color: blanchedalmond;
+    background-color: rgb(188, 189, 189);
     height: 3rem;
     width:12rem;
 }
 
 .backlog{
-    background-color: brown;
+    background-color: rgb(210, 231, 238);
     height: 3rem;
     width:12rem;
 }
 
 .board{
-    background-color: antiquewhite;
+    background-color: rgb(188, 189, 189);
     height: 3rem;
     width:12rem;
 }
 
 .setting{
-    background-color: brown;
-    height: 3rem;
+  background-color: rgb(101, 100, 100);
+  height: 3rem;
     width:12rem;
 }
 
@@ -53,7 +53,7 @@ header {
     left: 0;
     right: 0; */
     height: 60px;
-    background-color: lightcoral;
+    background-color: rgb(177, 200, 211);
   }
   .sidebar {
     position: absolute;
@@ -65,7 +65,7 @@ header {
     background-color: lightgray;
   }
   .sidebar-toggle {
-     background-color: antiquewhite;
+     background-color: rgb(255, 255, 255);
     position: absolute; 
     border-radius: 80% 80% 80% 80%;
     margin-left: 90%;

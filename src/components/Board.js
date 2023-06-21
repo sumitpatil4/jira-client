@@ -1,6 +1,6 @@
 import React from 'react'
 import {useState}from 'react';
-// import Navbar from './common/Navbar';
+import Navbar from './common/Navbar';
 import Sidebar from './common/Sidebar';
 import "./Board.css"
 
@@ -13,7 +13,7 @@ export default function Board() {
 
   return (
     <div className="board-component">
-       {/* <Navbar onClick={handleViewSidebar} /> */}
+       <Navbar onClick={handleViewSidebar} />
        <Sidebar isOpen={sidebarOpen} toggleSidebar={handleViewSidebar} />
        <div className="board-area">
         <h1>Hello I am Board Page</h1>

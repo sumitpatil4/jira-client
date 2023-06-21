@@ -1,5 +1,5 @@
 import React from 'react'
-// import Navbar from './common/Navbar'
+import Navbar from './common/Navbar'
 import Sidebar from './common/Sidebar'
 import { useState } from 'react';
 import "./Setting.css"
@@ -12,7 +12,7 @@ export default function Backlog() {
 
   return (
     <div className="setting-component">
-    {/* <Navbar onClick={handleViewSidebar} /> */}
+    <Navbar onClick={handleViewSidebar} />
     <Sidebar isOpen={sidebarOpen} toggleSidebar={handleViewSidebar} />
     <div className="setting-area">
      <h1>Hello I am Setting Page</h1>
