@@ -1,19 +1,23 @@
-import React, { useState } from "react";
+import React, { useState,useContext } from "react";
 import "../LoginSignUp/login.css";
 import "./signup.css";
 
 import { Button, Stack } from "@mui/material";
 import { AiOutlineMail, AiOutlineLock } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import accoliteLogo from "../../Images/accolitedigital.png";
 import axios from "axios";
 import GoogleLogin from "./GoogleSignIn";
+import AuthContext from "../ContextApi/AuthContext";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
   const [resPopUp,setResPopUp] = useState(false);
+  const { updateIsAuthenticated } = useContext(AuthContext);
+  const navigate = useNavigate();
 
 
   const login = (e) => {
@@ -25,6 +29,7 @@ const Login = () => {
       })
       .then((res) => {
         console.log(res);
+        updateIsAuthenticated(true);
         
         if(res.data===""){
             setMessage("Invalid Credential!!!!");
@@ -32,6 +37,10 @@ const Login = () => {
         }
       });
   };
+
+//   const goToSignUp = () => {
+//     navigate('/signUp", true);
+//   };
 
   return (
     <div className="login-container">
@@ -72,7 +81,7 @@ const Login = () => {
               />
             </div>
 
-            <Link href="/signup">New User ?</Link>
+            <Link to="/signUp">New User ?</Link>
             <Stack spacing={4} direction={"row"} sx={{ marginTop: "5px" }}>
               <Button variant="contained" type="submit">
                 Login

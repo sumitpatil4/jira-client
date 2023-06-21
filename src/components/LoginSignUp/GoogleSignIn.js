@@ -1,7 +1,9 @@
-import React, { useEffect } from 'react';
+import React, { useEffect,useContext } from 'react';
 import axios from 'axios';
+import AuthContext from "../ContextApi/AuthContext";
 
 const GoogleLogin = ({ onLoginSuccess }) => {
+    const { updateIsAuthenticated } = useContext(AuthContext);
 
     useEffect(() => {
         /* global google */
@@ -26,6 +28,7 @@ const GoogleLogin = ({ onLoginSuccess }) => {
             
             token: response.credential ,
         }).then((res) => {
+            updateIsAuthenticated(true);
             console.log(res.data);
             
         })

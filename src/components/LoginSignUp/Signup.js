@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useState,useContext } from "react";
 import "./signup.css";
 import { AiOutlineUser, AiOutlineMail, AiOutlineLock } from "react-icons/ai";
 import { Button, Stack } from "@mui/material";
 import {FaUserAlt} from "react-icons/fa";
-import signuplogo from '../../Images/signuplogo.png';
 import accoliteLogo from "../../Images/accolitedigital.png"
+import AuthContext from "../ContextApi/AuthContext";
 
 import axios from "axios";
 import { Link } from "react-router-dom";
@@ -12,6 +12,8 @@ import { Link } from "react-router-dom";
 
 
 const Signup = () => {
+  const { updateIsAuthenticated } = useContext(AuthContext);
+
     const[fname,setFname]=useState("")
     const[lname,setLname]=useState("")
     const[email,setEmail]=useState("")
@@ -28,7 +30,6 @@ const Signup = () => {
           setResPopUp(true);
         }
         else{
-        const registerBody={fname:fname,lname:lname,email:email,password:password}
         axios.post(`http://localhost:4545/api/user/register`,{
             fname:fname,
             lname:lname,
@@ -42,7 +43,9 @@ const Signup = () => {
             console.log(res.data);
           }
           else{
+
             console.log(res.data)
+            updateIsAuthenticated(true);
           }
         })
       }
@@ -119,7 +122,7 @@ const Signup = () => {
               <Button variant='contained' type="submit">Register</Button>
               </Stack>
               <div className="signup-login-redirect">
-                   <Link to="#" >I am already a member</Link>
+                   <Link to="/login" >I am already a member</Link>
                     
                 </div>
             </form>
