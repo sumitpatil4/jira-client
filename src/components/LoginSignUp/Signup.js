@@ -5,9 +5,9 @@ import { Button, Stack } from "@mui/material";
 import {FaUserAlt} from "react-icons/fa";
 import accoliteLogo from "../../Images/accolitedigital.png"
 import AuthContext from "../ContextApi/AuthContext";
-
 import axios from "axios";
 import { Link } from "react-router-dom";
+import GoogleLogin from "./GoogleLogin";
 
 
 
@@ -120,6 +120,8 @@ const Signup = () => {
               
               <Stack spacing={2} direction={"row"} sx={{ marginTop: '20px' }}>
               <Button variant='contained' type="submit">Register</Button>
+              <h2>OR</h2>
+              <GoogleLogin/>
               </Stack>
               <div className="signup-login-redirect">
                    <Link to="/login" >I am already a member</Link>

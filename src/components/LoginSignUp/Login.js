@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import accoliteLogo from "../../Images/accolitedigital.png";
 import axios from "axios";
-import GoogleLogin from "./GoogleSignIn";
+import GoogleLogin from "./GoogleLogin";
 import AuthContext from "../ContextApi/AuthContext";
 
 const Login = () => {

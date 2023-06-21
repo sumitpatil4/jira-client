@@ -1,11 +1,16 @@
 import React from 'react';
 import accoLogo from '../../Images/accolitedigital.png';
-import './infoPage.css';
+import './introPage.css';
 import { Button } from "@mui/material";
 import jiraLogo from "../../Images/business-meeting.png"
 import illustration from "../../Images/hero-illustration.png"
+import { useNavigate } from 'react-router-dom';
 
-const FirstPage = () => {
+const IntroPage = () => {
+    const navigate=useNavigate();
+    const navigateLogin=()=>{
+        navigate("/login",true)
+    }
     return (
         <div className="info-page">
             <div className='top-nav'>
@@ -13,7 +18,7 @@ const FirstPage = () => {
                     <img src={accoLogo} alt="accoliteLogo" className='logo' />
                 </div>
                 <div className='login-btn'>
-                    <Button variant='contained' type="submit">Login</Button>
+                    <Button variant='contained'  onClick={navigateLogin}>Login</Button>
                 </div>
             </div>
             <div className='second-bar'>
@@ -48,4 +53,4 @@ const FirstPage = () => {
     )
 }
 
-export default FirstPage;
+export default IntroPage;

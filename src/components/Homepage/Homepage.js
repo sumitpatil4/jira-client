@@ -3,8 +3,8 @@ import { Route,Routes,useNavigate } from 'react-router-dom';
 import Login from '../LoginSignUp/Login';
 import AuthContext from '../ContextApi/AuthContext';
 import UserProject from '../UserProject/UserProject';
-import LandingPage from '../LandingPage/LandingPage';
 import Signup from '../LoginSignUp/Signup';
+import IntroPage from '../IntroPage/IntroPage';
 
 const Homepage = () => {
   const { isAuthenticated,useEffectReload } = useContext(AuthContext);
@@ -12,10 +12,10 @@ const Homepage = () => {
   useEffect(() => {
     console.log(isAuthenticated);
     if (isAuthenticated) {
-      navigate("/", true);
+      navigate("/userProject", true);
     }
     else{
-      navigate("/login", true);
+      navigate("/", true);
     }
   }, [useEffectReload]);
   return (
@@ -24,14 +24,14 @@ const Homepage = () => {
           <>
               <div>
                 <Routes>
-                  <Route path="/" element={<UserProject />} />
+                  <Route path="/userProject" element={<UserProject />} />
                 </Routes>
               </div>
           </>
       :
       <>
           <Routes>
-            <Route path="/landingPage" element={<LandingPage />} />
+            <Route path="/" element={<IntroPage />} />
             <Route path="/signUp" element={<Signup />} />
             <Route path="/login" element={<Login />} />
            
