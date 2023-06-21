@@ -1,50 +1,61 @@
 .features{
     display: flex;
     flex-direction: column;
-    background-color:beige;
+    background-color:rgb(242, 244, 248);
     width:15vw;
     font-size: larger;
     font-weight: 600;
     height: 38rem;
     align-content: center;
+    border: none;
     
 }
 
-button{
+.sidebarClass{
+    padding-top: 10rem !important;
+}
+
+.backlog, .board, .roadmap, .setting{
     border:none;
     cursor: pointer;
+    width: 13.3rem;
 }
 
 button:hover{
   opacity: 0.8;
 }
 .project-name{
-    background-color: brown;
+    background-color: rgb(66, 112, 212);
     height: 5rem;
+    border: none;
+}
+
+.project-name:hover{
+  opacity: 1;
 }
 .roadmap{
     
-    background-color: blanchedalmond;
+    background-color: hsl(240, 100%, 99%);
     height: 3rem;
-    width:12rem;
+    
 }
 
 .backlog{
-    background-color: brown;
+    background-color: rgb(66, 112, 212);
     height: 3rem;
-    width:12rem;
+    
 }
 
 .board{
-    background-color: antiquewhite;
+    background-color: hsl(240, 100%, 99%);
     height: 3rem;
-    width:12rem;
+    
 }
 
 .setting{
-    background-color: brown;
+    background-color: rgb(66, 112, 212);
     height: 3rem;
-    width:12rem;
+   
 }
 
 header {
@@ -57,20 +68,26 @@ header {
   }
   .sidebar {
     position: absolute;
-    top: 60px;
+    /* top: 60px; */
     left: -15vw;
-    height: 100%;
+    height: 100vh;
     width: 15vw;
     transition: left 0.3s ease-in-out;
     background-color: lightgray;
   }
+
   .sidebar-toggle {
-     background-color: antiquewhite;
+    background-color: antiquewhite;
     position: absolute; 
     border-radius: 80% 80% 80% 80%;
-    margin-left: 90%;
+    border: none;
+    margin-left: 92%;
     height: 40px;
     width: 40px;
+  }
+
+  .sidebar-toggle:hover{
+    opacity: 1;
   }
 
   .content {
