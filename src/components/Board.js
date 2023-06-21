@@ -16,7 +16,7 @@ export default function Board() {
        {/* <Navbar onClick={handleViewSidebar} /> */}
        <Sidebar isOpen={sidebarOpen} toggleSidebar={handleViewSidebar} />
        <div className="board-area">
-        <h1>Hello I am Board Page</h1>
+        <h1 className='heading'>Hello I am Board Page</h1>
       </div>
       
     </div>

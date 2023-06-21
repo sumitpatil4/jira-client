@@ -14,7 +14,7 @@ export default function Roadmap() {
     {/* <Navbar onClick={handleViewSidebar} /> */}
     <Sidebar isOpen={sidebarOpen} toggleSidebar={handleViewSidebar} />
     <div className="roadmap-area">
-     <h1>Hello I am Roadmap Page</h1>
+     <h1 className='heading'>Hello I am Roadmap Page</h1>
    </div>
    
  </div>
