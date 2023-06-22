@@ -7,7 +7,7 @@ import Setting from "./components/Setting";
 import LandingPage from "./components/LandingPage/LandingPage";
 import Project from "./components/createproject/CreateProject";
 import Sidebar from "./components/common/Sidebar";
-import Navbar from "./components/common/navbar/Navbar"";
+import Navbar from "./components/common/navbar/Navbar";
 
 function App() {
   return (
