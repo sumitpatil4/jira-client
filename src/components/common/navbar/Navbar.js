@@ -1,6 +1,6 @@
 import React from 'react'
-import '../Navbar/index.css'
-import '../Navbar/Dropdown.css'
+import './index.css'
+import './Dropdown.css'
 import Project from './Project'
 import YourWork from './YourWork'
 import Team from './Team'
