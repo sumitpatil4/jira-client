@@ -5,6 +5,8 @@ import AuthContext from '../ContextApi/AuthContext';
 import UserProject from '../UserProject/UserProject';
 import Signup from '../LoginSignUp/Signup';
 import IntroPage from '../IntroPage/IntroPage';
+import Backlog from "../Backlog/Backlog";
+import Navbar from "../common/navbar/Navbar";
 
 const Homepage = () => {
   const { isAuthenticated,useEffectReload } = useContext(AuthContext);
@@ -12,7 +14,7 @@ const Homepage = () => {
   useEffect(() => {
     console.log(isAuthenticated);
     if (isAuthenticated) {
-      navigate("/userProject", true);
+      navigate("/backlog", true);
     }
     else{
       navigate("/", true);
@@ -23,8 +25,9 @@ const Homepage = () => {
         {isAuthenticated ?  
           <>
               <div>
+                <Navbar />
                 <Routes>
-                  <Route path="/userProject" element={<UserProject />} />
+                  <Route path="/backlog" element={<Backlog />} />
                 </Routes>
               </div>
           </>
