@@ -7,7 +7,8 @@ import Setting from "./components/Setting";
 import LandingPage from "./components/LandingPage/LandingPage";
 import Project from "./components/createproject/CreateProject";
 import Sidebar from "./components/common/Sidebar";
-import Navbar from "./components/common/navbar/Navbar"";
+import Navbar from "./components/common/navbar/Navbar";
+import ViewAllProjects from "./components/LandingPage/viewAllProjects/ViewAllProject";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/backlog" component={Backlog} />
         <Route path="/setting" component={Setting} />
         <Route path="/project" component={Project} />
+        <Route path="/viewallproject" component={ViewAllProjects}/>
       </Switch>
     </>
   );

@@ -1,0 +1,32 @@
+.ViewAllProjectMainHeading{
+    margin-left: 4%;
+    display: flex;
+    margin-top: 1%;
+}
+.createProjectButton{
+    background-color: blue;
+    color: white;
+    width: 20%;
+    margin-left: 900px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+.tableDataOfProjects{
+    border-top: 1px solid black;
+}
+.tableOfProjects{
+    width: 100%;
+    border-bottom: 1px solid rgb(137, 123, 123);
+    overflow: hidden;
+}
+.tableContainer{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.tableOfProjects td{
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+.line{
+    border-bottom: 1px solid rgb(137, 123, 123);
+}

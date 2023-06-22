@@ -78,7 +78,10 @@ export default function LandingPage() {
                 <div className='LandingSubHeading'>
                     {/* total projects that the user is enrolled in */}
                     <span className='recentProjectHeading'>Recent Projects</span>
-                    <span className='viewProjects'>View all projects</span>
+                    {/* <span className='viewProjects'>View all Projects</span> */}
+                    <NavLink to = '/viewallproject'>
+                        <Card.Title className='viewProjects'>View all Projects</Card.Title>
+                        </NavLink>
                 </div>
                 {/* user Cards run a loop */}
                 <div className='RecentProjectsCards'>
