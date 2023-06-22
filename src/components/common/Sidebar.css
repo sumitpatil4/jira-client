@@ -1,108 +1,78 @@
 .features{
     display: flex;
     flex-direction: column;
-    background-color:rgb(242, 244, 248);
-    width:15vw;
-    font-size: larger;
+    background-color:hsl(240, 100%, 99%);
+    width:16vw;
+    font-size:medium;
     font-weight: 600;
     height: 38rem;
-    align-content: center;
-    border: none;
-    
+    border: none; 
+    box-shadow: 0.1px 0.1px 0.6px 0.6px rgb(197, 197, 229);  
 }
 
 .sidebarClass{
     padding-top: 10rem !important;
 }
 
-.backlog, .board, .roadmap, .setting{
-    border:none;
+.sidebar-backlog-btn, 
+.sidebar-board-btn, 
+.sidebar-roadmap-btn, 
+.sidebar-setting-btn{
+  border: none;
     cursor: pointer;
-    width: 13.3rem;
+    width: 15vw;
+    background-color: hsl(240, 100%, 99%);
+    height:8vh;
+   text-align: left;
+  padding-left: 12%;
 }
 
-button:hover{
-  opacity: 0.8;
+.sidebar-backlog-btn:hover, 
+.sidebar-board-btn:hover, 
+.sidebar-roadmap-btn:hover, 
+.sidebar-setting-btn:hover, .sidebar-project-name:hover{
+   background-color: hsl(240, 46%, 86%);
+  font-size: large;
+  color:blue;  
 }
-.project-name{
-    background-color: rgb(66, 112, 212);
+
+.sidebar-project-name{
+    background-color: hsl(240, 100%, 99%);
     height: 5rem;
     border: none;
 }
 
-.project-name:hover{
-  opacity: 1;
-}
-.roadmap{
-    
-    background-color: hsl(240, 100%, 99%);
-    height: 3rem;
-    
-}
-
-.backlog{
-    background-color: rgb(66, 112, 212);
-    height: 3rem;
-    
-}
-
-.board{
-    background-color: hsl(240, 100%, 99%);
-    height: 3rem;
-    
-}
-
-.setting{
-    background-color: rgb(66, 112, 212);
-    height: 3rem;
-   
-}
-
-header {
-    /* position: absolute;
-    top: 0;
-    left: 0;
-    right: 0; */
-    height: 60px;
-    background-color: lightcoral;
-  }
-  .sidebar {
+.sidebar {
     position: absolute;
-    /* top: 60px; */
     left: -15vw;
     height: 100vh;
-    width: 15vw;
+    width: 16vw;
     transition: left 0.3s ease-in-out;
-    background-color: lightgray;
+    background-color: hsl(240, 100%, 99%);
+    align-items: start;
+   
   }
 
   .sidebar-toggle {
-    background-color: antiquewhite;
+    background-color: hsl(240, 100%, 99%);
     position: absolute; 
     border-radius: 80% 80% 80% 80%;
     border: none;
-    margin-left: 92%;
-    height: 40px;
-    width: 40px;
+    margin-left: 93%;
+    margin-top: 10%;
+    height: 30px;
+    width: 30px;
   }
 
   .sidebar-toggle:hover{
     opacity: 1;
   }
 
-  .content {
-    position: absolute;
-    top: 60px;
-    left: 0;
-    right: 0;
-    height: 100%;
-    transition: left 0.3s ease-in-out;
-    background-color: lightgray;
-  }
   .sidebar.open {
     left: 0;
   }
-  .content.open {
-    left: 15vw;
+
+  hr{
+    height:0%;
   }
-  
+ 
