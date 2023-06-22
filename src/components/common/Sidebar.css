@@ -1,0 +1,78 @@
+.features{
+    display: flex;
+    flex-direction: column;
+    background-color:hsl(240, 100%, 99%);
+    width:16vw;
+    font-size:medium;
+    font-weight: 600;
+    height: 38rem;
+    border: none; 
+    box-shadow: 0.1px 0.1px 0.6px 0.6px rgb(197, 197, 229);  
+}
+
+.sidebarClass{
+    padding-top: 10rem !important;
+}
+
+.sidebar-backlog-btn, 
+.sidebar-board-btn, 
+.sidebar-roadmap-btn, 
+.sidebar-setting-btn{
+  border: none;
+    cursor: pointer;
+    width: 15vw;
+    background-color: hsl(240, 100%, 99%);
+    height:8vh;
+   text-align: left;
+  padding-left: 12%;
+}
+
+.sidebar-backlog-btn:hover, 
+.sidebar-board-btn:hover, 
+.sidebar-roadmap-btn:hover, 
+.sidebar-setting-btn:hover, .sidebar-project-name:hover{
+   background-color: hsl(240, 46%, 86%);
+  font-size: large;
+  color:blue;  
+}
+
+.sidebar-project-name{
+    background-color: hsl(240, 100%, 99%);
+    height: 5rem;
+    border: none;
+}
+
+.sidebar {
+    position: absolute;
+    left: -15vw;
+    height: 100vh;
+    width: 16vw;
+    transition: left 0.3s ease-in-out;
+    background-color: hsl(240, 100%, 99%);
+    align-items: start;
+   
+  }
+
+  .sidebar-toggle {
+    background-color: hsl(240, 100%, 99%);
+    position: absolute; 
+    border-radius: 80% 80% 80% 80%;
+    border: none;
+    margin-left: 93%;
+    margin-top: 10%;
+    height: 30px;
+    width: 30px;
+  }
+
+  .sidebar-toggle:hover{
+    opacity: 1;
+  }
+
+  .sidebar.open {
+    left: 0;
+  }
+
+  hr{
+    height:0%;
+  }
+ 
