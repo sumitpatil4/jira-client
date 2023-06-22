@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Route, Switch } from "react-router-dom";
 import Backlog from "./components/Backlog/Backlog";
@@ -9,7 +8,6 @@ import LandingPage from "./components/LandingPage/LandingPage";
 import Project from "./components/createproject/CreateProject";
 import Sidebar from "./components/common/Sidebar";
 import Navbar from "./components/common/navbar/Navbar";
-
 
 function App() {
   return (
