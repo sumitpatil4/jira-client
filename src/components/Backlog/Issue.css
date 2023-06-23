@@ -1,0 +1,55 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 1px solid grey;
+    align-items: center;
+    padding: 0 0.5rem;
+    width: 100%;
+    margin: auto;
+    cursor: pointer;
+  }
+  
+  .issue-title {
+    border: none;
+    font-size: 1rem;
+    padding: 2%;
+    width: 250px;
+  }
+
+  .rightSectionIssue {
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+  }
+  
+  .leftSectionIssue {
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+  }
+  
+  .issueStatus {
+    padding: 4%;
+    width: fit-content;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .issueMenu {
+    visibility: hidden;
+  } 
+  
+  .container:hover {
+    .issueMenu {
+      visibility: visible;
+    }
+    background-color: rgb(232, 231, 231);
+    .issue-title {
+      background-color: rgb(232, 231, 231);
+    }
+  }
+  
+
+  .outer-wrapper {
+    width: 100vw;
+  }

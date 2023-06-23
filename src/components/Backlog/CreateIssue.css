@@ -1,0 +1,14 @@
+.create-Issue-Wrapper {
+    width: 100%;
+    margin-left: auto;
+}
+
+/* .createIssueBtn {
+    border: none;
+    width: 80%;
+    justify-content: flex-start;
+} */
+
+.create-Issue-Btn:hover {
+    border: none;
+}
