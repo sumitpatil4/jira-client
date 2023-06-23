@@ -3,7 +3,7 @@ import "./Sidebar.css";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import Backlog from "../Backlog/Backlog";
-import { Link } from "react-router-dom/cjs/react-router-dom.min";
+import { Link } from "react-router-dom";
 
 const Sidebar = (props) => {
   const sidebarClass = props.isOpen ? "sidebar open" : "sidebar";

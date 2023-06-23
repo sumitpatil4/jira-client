@@ -1,9 +1,11 @@
 import React from 'react'
-import '../Navbar/index.css'
-import '../Navbar/Dropdown.css'
+import '../navbar/index.css'
+import '../navbar/Dropdown.css'
 import Project from './Project'
 import YourWork from './YourWork'
 import Team from './Team'
+
+
 export default function Navbar() {
   let navlinks = ["Your Work", "Projects", "Teams"]
   return (
