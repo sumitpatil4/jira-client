@@ -6,16 +6,15 @@ import Board from "./components/Board";
 import Setting from "./components/Setting";
 import LandingPage from "./components/LandingPage/LandingPage";
 import Project from "./components/createproject/CreateProject";
-import Sidebar from "./components/common/Sidebar";
-import Navbar from "./components/common/navbar/Navbar"";
+import Navbar from "./components/common/Navbar/Navbar";
+import CreatIssue from "./components/common/Navbar/CreatIssue";
 
 function App() {
   return (
     <>
-      <Navbar />
-
+    <Navbar/>
       <Switch>
-      <Route exact path="/" component={LandingPage} />
+      <Route exact path="/" component={CreatIssue} />
         <Route exact path="/board" component={Board} />        
         <Route path="/roadmap" component={Roadmap} />
         <Route path="/backlog" component={Backlog} />
