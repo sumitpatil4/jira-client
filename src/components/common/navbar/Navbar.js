@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import './index.css'
+import './Navbar.css'
 import './Dropdown.css'
 import Project from './Project'
 import YourWork from './YourWork'
-import Team from './Team'
+import Team from './teams/Team'
 export default function Navbar() {
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
