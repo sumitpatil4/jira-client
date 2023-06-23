@@ -1,7 +1,6 @@
 import React from 'react'
 import {useState}from 'react';
-// import Navbar from './common/Navbar';
-import Sidebar from './common/Sidebar';
+import Sidebar from '../common/Sidebar';
 import "./Board.css"
 
 export default function Board() {

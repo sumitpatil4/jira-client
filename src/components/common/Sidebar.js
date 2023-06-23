@@ -2,7 +2,7 @@ import React from "react";
 import "./Sidebar.css";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import Backlog from "../Backlog/Backlog";
+import Backlog from "../backlog/Backlog";
 import { Link } from "react-router-dom";
 
 const Sidebar = (props) => {
