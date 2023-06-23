@@ -4,7 +4,7 @@ import {useState}from 'react';
 import Sidebar from '../common/sidebar/Sidebar';
 import "./Roadmap.css"
 
-export default function Roadmap() {
+export default function Roadmap(props) {
   const [sidebarOpen, setSideBarOpen] = useState(true);
   const handleViewSidebar = () => {
     setSideBarOpen(!sidebarOpen);

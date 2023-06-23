@@ -2,11 +2,14 @@
 button.invite-people{
     background-color: white;
     margin-top: 1rem;
+    border-style: none;
 }
 button.create-team{
     background-color: white;
     padding-bottom: 20px;
     height:1rem;
+    border-style: none;
+    padding-bottom: 7vh;
 }
 
 button.create-team:hover{

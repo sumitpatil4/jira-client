@@ -6,7 +6,7 @@
     margin-bottom: 5rem;
     background:linear-gradient(rgba(151, 168, 216, 0.8),transparent);
     /* border: 2px solid black; */
-    margin-left: 15%;
+    margin-left: 16%;
     transition: margin-left 0.3s ease-in-out;
 }
 
@@ -22,7 +22,8 @@
 }
 
 .first-container{
-    margin: 0.8rem;
+    margin-top: 6rem;
+    /* margin: 0.8rem; */
     margin-left: 2rem;
     /* margin-bottom: 0.8rem; */
 }
