@@ -4,6 +4,8 @@ import './Dropdown.css'
 import Project from './Project'
 import YourWork from './YourWork'
 import Team from './teams/Team'
+import { Button, Stack } from "@mui/material";
+
 export default function Navbar() {
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
@@ -11,8 +13,8 @@ export default function Navbar() {
   let navlinks = ["Your Work", "Projects", "Teams"]
   return (
     <div className='outerWrapper'>
-      <div>
-        <h1 style={{fontSize:"25px",fontWeight:"bold",color:"blue",marginTop:"1rem",marginLeft:"1.2rem"}}>Accolite Jira</h1>
+      <div className='navbar-title'>
+        <h2 className='navbar-logo' >Accolite Jira</h2>
       </div>
       <div className='menu-icon' onClick={handleClick}>
           <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
@@ -36,7 +38,12 @@ export default function Navbar() {
           })
           }
         </ul>
-        <button className='button-style'><b>Create</b></button>
+        <Stack spacing={2} direction={"column"} sx={{marginTop:'10px'}}>
+              <Button variant="contained" type="submit" style={{height:'35px'}}>
+               Create
+              </Button>
+            </Stack>
+        
       </div>
     </div>
   )

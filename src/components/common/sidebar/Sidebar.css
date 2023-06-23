@@ -9,7 +9,17 @@
     border: none; 
     box-shadow: 0.1px 0.1px 0.6px 0.6px rgb(197, 197, 229);  
 }
-
+.features-icon{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 10px;
+  height: 15%;
+  border-bottom: 1px solid rgb(78, 78, 78);
+}
+.icon-logo{
+  
+}
 .sidebarClass{
     padding-top: 10.1rem !important;    
 }
@@ -38,7 +48,6 @@
 
 .sidebar-project-name{
     background-color: hsl(240, 100%, 99%);
-    height: 5rem;
     border: none;
 }
 

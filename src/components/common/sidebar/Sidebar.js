@@ -1,5 +1,10 @@
 import React from "react";
 import "./Sidebar.css";
+import { Button, Stack } from "@mui/material";
+import { AiFillProject } from 'react-icons/ai';
+import { BsFillClipboardDataFill } from 'react-icons/bs';
+
+
 // import { useNavigate } from "react-router-dom";
 // import { useState } from "react";
 // import Backlog from "../Backlog/Backlog";
@@ -20,9 +25,21 @@ const Sidebar = (props) => {
           </button>
         )}
         <div className="features">
-
-          <button className="sidebar-project-name">Project Name</button>
-          <hr></hr>
+          <div className="features-icon">
+          <Stack spacing={2} direction={"row"} sx={{marginTop:'10px'}}>
+            <div className="icon-logo">
+          <AiFillProject />
+          </div>
+          
+              <Button variant="outline" type="submit" style={{height:'35px'}}>
+              Project Name
+              </Button>
+            </Stack>
+            
+  
+          </div>
+          
+          
           <Link to='/roadmap'>
             <button className="sidebar-roadmap-btn">
               <i class="fa-solid fa-bars-staggered"></i> &nbsp; Roadmap
@@ -38,7 +55,7 @@ const Sidebar = (props) => {
 
           <Link to='/board'>
             <button className="sidebar-board-btn">
-            <i class="fa-solid fa-barcode"></i> &nbsp; Board
+            <BsFillClipboardDataFill style={{marginTop:'-2%'}}/> &nbsp; Board
             </button>
           </Link>
          
