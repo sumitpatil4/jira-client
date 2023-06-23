@@ -1,0 +1,15 @@
+.roadmap-component{
+    display: flex;
+    flex-direction: column;
+}
+
+.roadmap-area{
+    background:linear-gradient(rgba(151, 168, 216, 0.8),transparent);
+    height: 100vh;
+    margin-left: 15.2%;
+    margin-top: 0%;
+}
+
+.heading{
+    margin-left: 2rem;
+}
