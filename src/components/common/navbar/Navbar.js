@@ -1,31 +1,32 @@
 import React, { useState } from 'react'
+import {Link} from 'react-router-dom'
+import './Navbar.css'
 import { useContext } from "react";
-import './index.css'
+import profile from '../../../Images/user.jpg'
 import './Dropdown.css'
 import Dropdown from "react-bootstrap/Dropdown";
 import Project from './Project'
 import YourWork from './YourWork'
-import Team from './Team'
-import profile from './user.jpg'
-import { useNavigate } from "react-router-dom";
-import AuthContext from "../../ContextApi/AuthContext"
+import Team from './teams/Team'
 export default function Navbar() {
-  const authData = useContext(AuthContext);
+  //const authData = useContext(AuthContext);
   //const userImageUrl = authData.googleData.picture;
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
-  const navigate = useNavigate();
+  //const navigate = useNavigate();
   let navlinks = ["Your Work", "Projects", "Teams"]
   const unmount=()=>{
-    navigate("/");
-    authData.handleLogout();
+    //navigate("/");
+    //authData.handleLogout();
     
   }
   return (
     <div className='outerWrapper'>
       <div>
+        <Link to='/landingpage' style={{textDecoration:'none'}}>
         <h1 style={{fontSize:"25px",fontWeight:"bold",color:"blue",marginTop:"1rem",marginLeft:"1.2rem"}}>Accolite Jira</h1>
+        </Link>
       </div>
       <div className='menu-icon' onClick={handleClick}>
           <i className={click ? 'fas fa-times' : 'fas fa-bars'} />

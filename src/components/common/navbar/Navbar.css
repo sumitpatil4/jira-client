@@ -1,6 +1,6 @@
 .outerWrapper{
     position:fixed;
-    height: 11.55vh;
+    height: 9.5vh;
     background: white;
     display: flex;
     gap: 15rem;
@@ -13,7 +13,7 @@
     display: flex;
     margin-right: 1rem;
     gap: 0rem;
-    margin-left: 30vh;
+    margin-left: 23vh;
     
 }
 .label-style{
@@ -56,7 +56,7 @@
         background-color: blue;
         height:6vh;
         width:14vh;
-        margin-top: 2.3vh;
+        margin-top: 1.7vh;
       
 }
 .button-style:hover{
@@ -120,6 +120,7 @@
     /* color: var(--bs-btn-active-color); */
     background-color: white ;
 }
+
   .profile {
     background-color: rgb(253, 253, 253);
     opacity:1;
@@ -129,7 +130,7 @@
     justify-content: center;
     align-items: center;
     margin-left: 27%;
-    padding-top: 2.5vh;
+    padding-top: 1vh;
   }
   .profileUserName :hover {
    background-color: white;

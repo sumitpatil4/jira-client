@@ -1,13 +1,13 @@
-.roadmap-component{
+.setting-component{
     display: flex;
     flex-direction: column;
 }
 
-.roadmap-area{
+.setting-area{
     background:linear-gradient(rgba(151, 168, 216, 0.8),transparent);
     height: 100vh;
-    margin-left: 15.2%;
-    margin-top: 0%;
+    margin-left: 16%;
+    margin-top: 5.5%;
 }
 
 .heading{

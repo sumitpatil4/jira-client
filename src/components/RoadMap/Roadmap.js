@@ -1,10 +1,10 @@
 import React from 'react'
 import {useState}from 'react';
 // import Navbar from './common/Navbar';
-import Sidebar from './common/Sidebar';
+import Sidebar from '../common/sidebar/Sidebar';
 import "./Roadmap.css"
 
-export default function Roadmap() {
+export default function Roadmap(props) {
   const [sidebarOpen, setSideBarOpen] = useState(true);
   const handleViewSidebar = () => {
     setSideBarOpen(!sidebarOpen);

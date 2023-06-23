@@ -1,6 +1,6 @@
 import React from 'react'
-import InvitePeople from './teams/InvitePeople';
-import CreateTeam from './teams/CreateTeam';
+import InvitePeople from './InvitePeople';
+import CreateTeam from './CreateTeam';
 import {Link} from 'react-router-dom';
 export default function Team() {
  
