@@ -11,10 +11,9 @@
 }
 .nav-links{
     display: flex;
-    margin-right: 1rem;
     gap: 0rem;
-    margin-left: 23vh;
-    
+    margin-right:1rem;
+    margin-left: 15vh;
 }
 .label-style{
     padding-left: 16.5vh;
@@ -45,12 +44,12 @@
 }
 .button-style{
         position:fixed;
-        margin-left:90vh;
+        margin-left:85vh;
         padding: 1vh 2vh;
         border-radius: 4px;
         outline: none;
         border: none;
-        font-size: 18px;
+        font-size: 14px;
         color: #fff;
         cursor: pointer;
         background-color: blue;
@@ -63,12 +62,10 @@
     
         padding: 6px 18px;
         padding-bottom: 7px;
-        transition: all 0.3s ease-out;
         background-color: transparent;
         color: rgb(156, 156, 156);;
         border-radius: 4px;
-        border: 3px solid rgb(156, 156, 156);;
-        transition: all 0.3s ease-out;
+        border: 3px solid rgb(156, 156, 156);
       
 }
 .yourWorkWrapper{
@@ -127,9 +124,7 @@
     width: 0%;
     height: 8vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 27%;
+    margin-left:33%;
     padding-top: 1vh;
   }
   .profileUserName :hover {
