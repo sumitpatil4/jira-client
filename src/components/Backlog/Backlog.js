@@ -2,7 +2,7 @@ import React from 'react'
 import {useState} from 'react'
 import BacklogUpperChild from './BacklogUpperChild'
 import BacklogLowerChild from './BacklogLowerChild'
-import Sidebar from '../common/Sidebar';
+import Sidebar from '../common/sidebar/Sidebar';
 
 function Backlog() {
   
