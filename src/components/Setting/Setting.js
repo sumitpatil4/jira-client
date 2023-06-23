@@ -1,7 +1,7 @@
 import React from 'react'
-import Sidebar from './common/Sidebar'
+import Sidebar from '../common/Sidebar'
 import { useState } from 'react';
-import "./Backlog.css"
+import "./Setting.css"
 
 export default function Backlog() {
   const [sidebarOpen, setSideBarOpen] = useState(true);
@@ -10,11 +10,10 @@ export default function Backlog() {
  }
 
   return (
-    <div className="backlog-component">
-    {/* <Navbar onClick={handleViewSidebar} /> */}
+    <div className="setting-component">
     <Sidebar isOpen={sidebarOpen} toggleSidebar={handleViewSidebar} />
-    <div className="backlog-area">
-     <h1>Hello I am Backlog Page</h1>
+    <div className="setting-area">
+     <h1 className='heading'>Hello I am Setting Page</h1>
    </div>
    
  </div>
