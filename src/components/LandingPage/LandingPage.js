@@ -1,5 +1,6 @@
 import React from 'react'
 import Card from 'react-bootstrap/Card';
+
 import './LandingPage.css'
 import { NavLink } from 'react-router-dom';
 export default function LandingPage() {

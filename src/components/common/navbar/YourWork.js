@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-
+import {Link} from 'react-router-dom';
 export default function () {
    
     let showButtons=["Assign To Me","Recent","Boards"]
@@ -26,7 +26,9 @@ export default function () {
         }
         <div>
         <hr/>
+        <Link to='/'>
         <button style={{fontWeight:600,color:"gray"}}>Go To Your Work Page</button>
+        </Link>
         </div>
     </div>
   )
