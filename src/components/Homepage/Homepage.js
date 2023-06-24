@@ -2,17 +2,16 @@ import React, { useContext, useEffect } from 'react'
 import { Route,Routes,useNavigate, Switch } from 'react-router-dom';
 import Login from '../LoginSignUp/Login';
 import AuthContext from '../ContextApi/AuthContext';
-import UserProject from '../UserProject/UserProject';
+// import UserProject from '../UserProject/UserProject';
 import Signup from '../LoginSignUp/Signup';
 import IntroPage from '../IntroPage/IntroPage';
 import LandingPage from '../LandingPage/LandingPage';
-import Navbar from '../common/navbar/Navbar';
-import Backlog from '../Backlog/Backlog';
-import Roadmap from '../RoadMap/RoadMap';
+import Navbar from '../common/navbar/Navbar'                                               
+import Backlog from '../Backlog/Backlog'
+import Roadmap from '../RoadMap/Roadmap';
 import Setting from '../Setting/Setting';
 import Project from '../common/navbar/Project';
 import Board from '../Board/Board';
-
 
 const Homepage = () => {
   const { isAuthenticated,useEffectReload } = useContext(AuthContext);
@@ -31,7 +30,7 @@ const Homepage = () => {
         {isAuthenticated ?  
           <>
               <div>
-                <Navbar />
+                <Navbar/>
                 <Routes>
                   <Route path="/landingpage" element={<LandingPage/>} />
                   <Route path="/backlog" element={<Backlog/>} />
