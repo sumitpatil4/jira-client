@@ -5,6 +5,7 @@ import Project from './Project'
 import YourWork from './YourWork'
 import Team from './teams/Team'
 import { Button, Stack } from "@mui/material";
+import CreateProject from './CreateProject'
 
 export default function Navbar() {
   const [click, setClick] = useState(false);
@@ -42,9 +43,7 @@ export default function Navbar() {
           }
         </ul>
         <Stack spacing={2} direction={"column"} sx={{marginTop:'10px'}}>
-              <Button variant="contained" type="submit" style={{height:'35px'}}>
-               Create
-              </Button>
+              <CreateProject/>
             </Stack>
         
       </div>

@@ -3,11 +3,12 @@ import Card from "react-bootstrap/Card";
 import add from "../../Images/add.png";
 import "./LandingPage.css";
 import { NavLink } from "react-router-dom";
+import { MdOutlinePending } from 'react-icons/md';
 export default function LandingPage() {
   const assignedProjects = [
     {
       projectName: "Project1",
-      issueDescription: "new Issue",
+      issueDescription: "new Issuenew Issuenew Issuenew Issuenew Issuenew Issue ",
       projectNickName: "DEM1",
     },
     {
@@ -22,15 +23,13 @@ export default function LandingPage() {
       <Card className="add-project">
         <div className="cardContainer-addproject">
           <NavLink to="/backlog" className="add-project-nav">
-            
-                <Card.Title className="ProjectName-addproject">
-                  New Project
-                </Card.Title>
-              
-                <Card.ImgOverlay className="add-newproject">
-                  <img src={add} alt="add" />
-                </Card.ImgOverlay>
-              
+            <Card.Title className="ProjectName-addproject">
+              New Project
+            </Card.Title>
+
+            <Card.ImgOverlay className="add-newproject">
+              <img src={add} alt="add" />
+            </Card.ImgOverlay>
           </NavLink>
         </div>
       </Card>
@@ -87,8 +86,15 @@ export default function LandingPage() {
           <span className="viewProjects">View all projects</span>
         </div>
         {/* user Cards run a loop */}
-        <div className="RecentProjectsCards"><div>{createCard(0)}</div>
-        <div className="all-recent-project"><div>{getCard(0)}</div><div>{getCard(0)}</div><div>{getCard(0)}</div><div>{getCard(0)}</div><div>{getCard(0)}</div>  </div>
+        <div className="RecentProjectsCards">
+          <div>{createCard(0)}</div>
+          <div className="all-recent-project">
+            <div>{getCard(0)}</div>
+            <div>{getCard(0)}</div>
+            <div>{getCard(0)}</div>
+            <div>{getCard(0)}</div>
+            <div>{getCard(0)}</div>{" "}
+          </div>
         </div>
       </div>
       <div className="LandingAssignedProject">
@@ -98,40 +104,39 @@ export default function LandingPage() {
         </div>
         <div className="ToDoSection">
           <p className="ToDoHeading"> TO DO </p>
-          <table style={{ marginLeft: "0.8%" }}>
-            <tbody>
-              {assignedProjects.map((index) => {
-                return (
-                  <tr className="assignedProjectsTableRow">
-                    <td>
-                      <td>
-                        <i className="fa-regular fa-square-check fa-xl"></i>
-                      </td>
-                      <td>
-                        <div className="assignedProjectsTableContent">
-                          <div className="ProjectIssueDescContainer">
-                            <span>{index.issueDescription}</span>
-                          </div>
-                          <div className="TableContentSubContainer">
-                            <div className="ProjectNickNameContainer">
-                              {index.projectNickName}
-                              &nbsp; <span>&#183;</span> &nbsp;
-                            </div>
-                            <div className="ProjectNameContainer">
-                              {index.projectName}
-                            </div>
-                          </div>
-                        </div>
-                      </td>
-                      <td>
-                        <span className="ToDoWordColumn">To Do</span>
-                      </td>
-                    </td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
+          <table className="assignedProjectsTable">
+  <tbody>
+    {assignedProjects.map((index) => {
+      return (
+        <tr className="assignedProjectsTableRow" key={index.id}>
+          <td className="firstTd">
+           <MdOutlinePending/>
+          </td>
+          <td className="centerTd">
+            <div className="assignedProjectsTableContent">
+              <div className="ProjectIssueDescContainer">
+                <span>{index.issueDescription}</span>
+              </div>
+              <div className="TableContentSubContainer">
+                <div className="ProjectNickNameContainer">
+                  {index.projectNickName}
+                  &nbsp;<span>&#183;</span>&nbsp;
+                </div>
+                <div className="ProjectNameContainer">
+                  {index.projectName}
+                </div>
+              </div>
+            </div>
+          </td>
+          <td className="lastTd">
+            <span className="ToDoWordColumn">To Do</span>
+          </td>
+        </tr>
+      );
+    })}
+  </tbody>
+</table>
+
         </div>
       </div>
     </div>

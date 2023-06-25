@@ -3,8 +3,7 @@ import "./Sidebar.css";
 import { Button, Stack } from "@mui/material";
 import { AiFillProject } from 'react-icons/ai';
 import { BsFillClipboardDataFill } from 'react-icons/bs';
-
-
+import {  FaAngleDoubleLeft ,FaAngleDoubleRight} from 'react-icons/fa';
 // import { useNavigate } from "react-router-dom";
 // import { useState } from "react";
 // import Backlog from "../Backlog/Backlog";
@@ -16,13 +15,13 @@ const Sidebar = (props) => {
     <>
       <div className={sidebarClass}>
         {props.isOpen ? (
-          <div onClick={props.toggleSidebar} className="sidebar-toggle">
-            <i className="fa-solid fa-angles-left" ></i>
-          </div>
+          
+                     <FaAngleDoubleLeft className="sidebar-toggle" onClick={props.toggleSidebar}/>
         ) : (
-          <div onClick={props.toggleSidebar} className="sidebar-toggle">
-            <i className="fa-solid fa-angles-right"></i>
-          </div>
+          <FaAngleDoubleRight className="sidebar-toggle" onClick={props.toggleSidebar}/>
+          // <div onClick={props.toggleSidebar} className="sidebar-toggle">
+          //   <i className="fa-solid fa-angles-right"></i>
+          // </div>
         )}
         <div className="features">
           <div className="features-icon">

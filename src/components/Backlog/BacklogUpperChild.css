@@ -7,6 +7,7 @@
     background:linear-gradient(rgba(151, 168, 216, 0.8),transparent);
     margin-left: 15%;
     transition: margin-left 0.3s ease-in-out;
+    margin-top: 3.8rem;
 }
 
 .main-container-sidebar-not-open{
@@ -18,6 +19,7 @@
     background:linear-gradient(rgba(151, 168, 216, 0.8),transparent);
     /* border: 2px solid black; */
     transition: margin-left 0.3s ease-in-out;
+    margin-top: 3.8rem;
 }
 
 .first-container{

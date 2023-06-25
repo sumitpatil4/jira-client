@@ -1,6 +1,7 @@
 .roadmap-component{
     display: flex;
     flex-direction: column;
+    margin-top: 3.8rem;
 }
 
 .roadmap-area{

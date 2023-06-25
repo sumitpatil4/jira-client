@@ -1,13 +1,14 @@
-.outerWrapper{
+.outerWrapper {
     height: 10vh;
     background: aliceblue;
     display: flex;
     gap: 15rem;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-
-    /* justify-content: space-between; */
-
-}
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999; /* Adjust the value as needed to make sure it's above the sidebar */
+  }
 .navbar-title{
     display: flex;
     flex-direction: row;
@@ -178,7 +179,11 @@
 }
 
 
-
+.add-project-date{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 
 
 

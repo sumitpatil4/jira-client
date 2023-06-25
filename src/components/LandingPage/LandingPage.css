@@ -36,8 +36,61 @@
 .viewProjects:hover {
     cursor: pointer;
 }
-
-.assignedProjectsTableRow :hover {
+.assignedProjectsTable {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .assignedProjectsTable td {
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+  
+  .assignedProjectsTable .assignedProjectsTableRow:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .assignedProjectsTableContent {
+    display: flex;
+    align-items: center;
+  }
+  
+  .ProjectIssueDescContainer {
+    flex-grow: 1;
+  }
+  
+  .TableContentSubContainer {
+    display: flex;
+    align-items: center;
+  }
+  
+  .ProjectNickNameContainer {
+    margin-right: 5px;
+    font-size: 12px;
+    font-weight: 400;
+    color: rgb(119, 119, 119);
+  }
+  
+  .ToDoWordColumn {
+    font-size: 12px;
+    font-weight: 400;
+    color: rgb(119, 119, 119);
+  }
+  
+  .firstTd {
+    width: 1px;
+  }
+  
+  .centerTd {
+    width: calc(100% - 100px); /* Adjust the value as needed */
+  }
+  
+  .lastTd{
+    width: 100px;
+    text-align: center
+  }
+  
+/* .assignedProjectsTableRow :hover {
     background-color: rgb(245, 245, 245);
     cursor: pointer;
 }
@@ -51,7 +104,7 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-}
+} */
 
 .cardTextStyle {
     margin-top: 0px;
@@ -75,18 +128,11 @@
 
 .designationOfTheUser,
 .ToDoHeading,
-.CardFont,
-.TableContentSubContainer,
-.ToDoWordColumn {
+.CardFont{
     margin-top: 0px;
     font-size: 12px;
     font-weight: 400;
     color: rgb(119, 119, 119);
-}
-
-.ToDoWordColumn {
-    width: fit-content;
-    margin-right: 20rem;
 }
 
 .ToDoHeading {

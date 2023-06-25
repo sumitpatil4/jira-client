@@ -36,12 +36,6 @@ export default function AddTeam() {
           <Form className="user-assign">
           <Form.Label>Team Name</Form.Label><br></br>
             <input style={{marginBottom:'10px'}} className="search-input" placeholder='' />
-          
-            
-            
-
-            
-
           </Form>
         
         </Modal.Body>
@@ -53,9 +47,7 @@ export default function AddTeam() {
             }}>Add</Button>
 
                 </Stack>
-          
-         
-       
+
         </Modal.Footer>
       </Modal>
     </>
