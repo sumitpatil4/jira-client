@@ -1,6 +1,8 @@
 import React from 'react';
 import './BacklogUpperChild.css';
 import AddPeople from './AddPeople';
+import AddTeam from './AddTeam';
+
 function BacklogUpperChild(props) {
   return (
     <>
@@ -12,9 +14,11 @@ function BacklogUpperChild(props) {
         <div className='second-container'>
          <input placeholder='Search backlog' />
          <i className="fa-solid fa-magnifying-glass search-icon"></i>
+         <AddTeam />
          <AddPeople />
         </div>
         <div className='third-container'>
+         
         </div>
       </div>
     </>

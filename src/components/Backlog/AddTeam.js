@@ -3,7 +3,9 @@ import Modal from "react-bootstrap/Modal";
 import Form from "react-bootstrap/Form";
 import { useState } from "react";
 import { Button,Stack } from "@mui/material";
-export default function AddPeople() {
+
+import { BsMicrosoftTeams } from 'react-icons/bs';
+export default function AddTeam() {
   const [show, setShow] = useState(false);
   const handleClose = () => {
     setShow(false);
@@ -18,7 +20,7 @@ export default function AddPeople() {
           handleShow();
         }}
       >
-        <i className="fa-solid fa-user-plus user-icon"></i>
+        <BsMicrosoftTeams/>
       </button>
 
       <Modal
@@ -28,28 +30,17 @@ export default function AddPeople() {
         keyboard={false}
       >
         <Modal.Header>
-          <Modal.Title>Add People</Modal.Title>
+          <Modal.Title>Create Team</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Form className="user-assign">
-          <Form.Label>Team</Form.Label>
-            <Form.Select style={{marginBottom:'10px'}}>
-              <option>Please select a team</option>
-              <option>Team 1</option>
-              <option>Team 2</option>
-              <option>Team 3</option>
-            </Form.Select>
-            <Form.Label>Names or Emails</Form.Label><br></br>
-            <input style={{marginBottom:'10px'}} className="search-input" placeholder='eg:Mridul; mridul@accolitedigital.com' />
-            <i className="fa-solid fa-magnifying-glass search-icon"></i>
+          <Form.Label>Team Name</Form.Label><br></br>
+            <input style={{marginBottom:'10px'}} className="search-input" placeholder='' />
+          
+            
+            
 
-            <Form.Label>Role</Form.Label>
-            <Form.Select style={{marginBottom:'10px'}}>
-              <option>Please select role</option>
-              <option>Administrator</option>
-              <option>Developers</option>
-              <option>Users</option>
-            </Form.Select>
+            
 
           </Form>
         

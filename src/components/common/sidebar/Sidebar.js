@@ -16,23 +16,23 @@ const Sidebar = (props) => {
     <>
       <div className={sidebarClass}>
         {props.isOpen ? (
-          <button onClick={props.toggleSidebar} className="sidebar-toggle">
-            <i class="fa-solid fa-angles-left"></i>
-          </button>
+          <div onClick={props.toggleSidebar} className="sidebar-toggle">
+            <i className="fa-solid fa-angles-left" ></i>
+          </div>
         ) : (
-          <button onClick={props.toggleSidebar} className="sidebar-toggle">
-            <i class="fa-solid fa-angles-right"></i>
-          </button>
+          <div onClick={props.toggleSidebar} className="sidebar-toggle">
+            <i className="fa-solid fa-angles-right"></i>
+          </div>
         )}
         <div className="features">
           <div className="features-icon">
           <Stack spacing={2} direction={"row"} sx={{marginTop:'10px'}}>
             <div className="icon-logo">
-          <AiFillProject />
+          <AiFillProject  />
           </div>
           
               <Button variant="outline" type="submit" style={{height:'35px'}}>
-              Project Name
+              Project Name 
               </Button>
             </Stack>
             
