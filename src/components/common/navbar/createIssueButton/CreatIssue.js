@@ -73,7 +73,7 @@ export default function CreatIssue() {
         <>
             {/* on click create button this modal will be visible */}
 
-            <Button variant="primary" onClick={handleCreateIssueShow} className='button-style'> 
+            <Button variant="primary" onClick={handleCreateIssueShow}> 
                 Create
             </Button>
 

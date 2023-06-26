@@ -44,7 +44,7 @@ const Homepage = () => {
         :
         <>
           <Routes>
-            <Route path="/" element={<Navbar />} />
+            <Route path="/" element={<IntroPage  />} />
             <Route path="/signUp" element={<Signup />} />
             <Route path="/login" element={<Login />} />
           </Routes>
