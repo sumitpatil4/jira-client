@@ -73,8 +73,8 @@ export default function CreatIssue() {
         <>
             {/* on click create button this modal will be visible */}
 
-            <Button variant="primary" onClick={handleCreateIssueShow}> 
-                Launch demo modal
+            <Button variant="primary" onClick={handleCreateIssueShow} className='button-style'> 
+                Create
             </Button>
 
             <Modal show={show} onHide={handleCreateIssueClose} scrollable={true} dialogClassName='CreateIssueModalWidth'>

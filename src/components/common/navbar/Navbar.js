@@ -4,6 +4,7 @@ import './Dropdown.css'
 import Project from './Project'
 import YourWork from './YourWork'
 import Team from './teams/Team'
+import CreatIssue from './createIssueButton/CreatIssue'
 export default function Navbar() {
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
@@ -34,7 +35,8 @@ export default function Navbar() {
           })
           }
         </ul>
-        <button className='button-style'><b>Create</b></button>
+        {/* <button className='button-style'><b>Create</b></button> */}
+        <CreatIssue/>
       </div>
     </div>
   )

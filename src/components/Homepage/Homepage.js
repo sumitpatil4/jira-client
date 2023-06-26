@@ -5,12 +5,12 @@ import AuthContext from '../ContextApi/AuthContext';
 import Signup from '../LoginSignUp/Signup';
 import IntroPage from '../IntroPage/IntroPage';
 import LandingPage from '../LandingPage/LandingPage';
-import Navbar from '../common/Navbar/Navbar';
+import Navbar from '../common/navbar/Navbar';
 import Backlog from '../Backlog/Backlog';
 import Roadmap from '../RoadMap/Roadmap';
 import Setting from '../Setting/Setting';
-import Project from '../common/Navbar/Project';
-import CreatIssue from '../common/Navbar/createIssueButton/CreatIssue';
+import Project from '../common/navbar/Project';
+import CreatIssue from '../common/navbar/createIssueButton/CreatIssue';
 import Board from '../Board/Board';
 
 const Homepage = () => {
@@ -44,7 +44,7 @@ const Homepage = () => {
         :
         <>
           <Routes>
-            <Route path="/" element={<CreatIssue />} />
+            <Route path="/" element={<Navbar />} />
             <Route path="/signUp" element={<Signup />} />
             <Route path="/login" element={<Login />} />
           </Routes>
