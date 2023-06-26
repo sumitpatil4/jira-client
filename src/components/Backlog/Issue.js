@@ -3,31 +3,44 @@ import React, { useState, useEffect } from 'react'
 import BacklogMenu from './BacklogMenu'
 import './Issue.css'
 import CreateIssue from './CreateIssue'
+import EditIcon from '@mui/icons-material/Edit';
 
 const Issue = (props) => {
 
     const [issueTitle, setIssueTitle] = useState(props.title)
-    const [editable, setEditable] = useState(props.edit)
+    const [isEditing, setIsEditing] = useState(false);
+
+    const handleClick = () => {
+        setIsEditing(true);
+    };
+
+    const handleChange = (event) => {
+        setIssueTitle(event.target.value);
+    };
+
+    const handleBlur = () => {
+        setIsEditing(false);
+    };
 
     return (
         <>
             <div className='container'>
             <div className='leftSectionIssue'>
                 <img class="sc-8u98g6-1 fvNefW" role="presentation" src="https://abhishekarora2206.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10315?size=medium" />
-                {
-                    editable ? (
-                        <>
-                            <TextField required="true" id="standard-basic" className='issue-title' variant="standard" defaultValue={issueTitle} onChange={(e) => {
-                                setIssueTitle(e.target.value);
-                            }} />
-                            <Button variant="outlined" onClick={() => setEditable(false)}
-                                sx = {{ height: '30px' }}
-                            > OK</Button>
-                        </>
-                    ) : (
+                {isEditing ? (
+                    <input
+                    type="text"
+                    defaultValue={issueTitle}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    autoFocus
+                    />
+                ) : (
+                    <>
                         <Typography className='issue-title'>{issueTitle}</Typography>
-                    )
-                }
+                        <EditIcon onClick={handleClick}/>
+                    </>
+                )}
             </div>
             <div className='rightSectionIssue'>
                 <div className='wrapper'>
@@ -44,11 +57,10 @@ const Issue = (props) => {
                     </g>
                 </svg>
                 <div className='issueMenu'>
-                    <BacklogMenu setEditable={setEditable}/>
+                    <BacklogMenu/>
                 </div>
             </div>
         </div>
-        <CreateIssue />
         </>
     )
 }

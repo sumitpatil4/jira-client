@@ -23,7 +23,7 @@ button:hover{
   opacity: 0.8;
 }
 .project-name{
-    background-color: rgb(66, 112, 212);
+    background-color: #0052CC;
     height: 5rem;
 }
 .roadmap{
@@ -34,7 +34,7 @@ button:hover{
 }
 
 .backlog{
-    background-color: rgb(66, 112, 212);
+    background-color: #0052CC;
     height: 3rem;
     width:12.8rem;
 }
@@ -46,7 +46,7 @@ button:hover{
 }
 
 .setting{
-    background-color: rgb(66, 112, 212);
+    background-color: #0052CC;
     height: 3rem;
     width:12.8rem;
 }

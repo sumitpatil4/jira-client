@@ -28,7 +28,7 @@
 
 .viewProjects {
     margin-left: 80%;
-    color: skyblue;
+    color: #0052CC;
 }
 
 .viewProjects:hover {
@@ -36,12 +36,21 @@
 }
 
 .assignedProjectsTableRow :hover {
-    background-color: rgb(245, 245, 245);
+    background-color: #0052CC;
     cursor: pointer;
 }
 
 .assignedProjectsTableContent {
     margin-right: 50rem;
+}
+
+.assignedProjectsTableRow:hover {
+    .ProjectNameContainer {
+        color: white
+    }
+    .ProjectNickNameContainer {
+        color: white
+    }
 }
 
 .TableContentSubContainer {

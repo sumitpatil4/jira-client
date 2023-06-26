@@ -6,24 +6,24 @@ import MoreVertIcon from '@mui/icons-material/MoreVert';
 import { useState } from 'react';
 
 const options = [
-    'Edit',
     'Delete'
 ];
 
 const ITEM_HEIGHT = 40;
 
-export default function BacklogMenu(props) {
+export default function BacklogMenu() {
     
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
+
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);
     };
+
     const handleClose = (index) => {
-        if(options[index] === "Edit")
+        if(options[index] === "Delete")
         {
             console.log(options[index] + " is pressed");
-            props.setEditable("true");
         }
         setAnchorEl(null);
     };

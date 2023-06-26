@@ -8,6 +8,7 @@ import { useDrag, useDrop, DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
 import EditSprint from './EditSprint';
 import CreateIssue from './CreateIssue';
+import IssueList from './IssueList';
 
 export default function BacklogLowerChild(props) {
   const handleButtonClick = (event) => {
@@ -24,9 +25,9 @@ export default function BacklogLowerChild(props) {
               <Accordion.Header>Backlog <button className="addDates" variant="primary" onClick={handleButtonClick}><i class="fa-solid fa-pencil"></i>Add Dates </button> </Accordion.Header>
               <Accordion.Body>
                 <DragAndDropArea />
+                <IssueList />
                 <CreateIssue />
               </Accordion.Body>
-             
             </Accordion.Item>
           </Accordion>
          
