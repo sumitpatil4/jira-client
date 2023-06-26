@@ -1,6 +1,6 @@
 .info-page{
     overflow:hidden;
-    height: 99vh;
+    /* height: 99vh; */
 }
 
 .top-nav {
@@ -15,7 +15,7 @@
 .logo {
     padding: 10px;
     height: 8vh;
-    width: 20vw;
+    width: 17vw;
   }
 
 .login-btn{
@@ -56,8 +56,17 @@
 }
 
 .second-bar-options{
+    display: flex;
     align-items: center;
-    padding-left: 20px;
+    padding-left: 30px;
+    padding-top: 3px;
+}
+
+.second-bar-options h4:hover{
+    border:none;
+    border-bottom: 2px solid grey;
+    cursor: pointer;
+    transform: scale(1.1);
 }
 
 .inner-container{
@@ -86,4 +95,49 @@
 .innerContainer-image img{
     max-width: 100%;
     max-height: 100%;
+}
+
+.roadmap{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.roadmap-image{
+    /* border: 1px solid red; */
+    width: 55%;
+    height: 60vh;
+    padding: 20px;
+}
+
+.roadmap-image img{
+    max-width: 95%;
+    max-height: 95%;
+    border: 1px black solid;
+}
+
+.roadmap-text{
+    /* border: 1px solid darkblue; */
+    width: 45%;
+    height: 60vh;
+}
+
+.roadmap-text h2{
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 35px;
+}
+
+.roadmap-text p{
+    font-size: large;
+    font-style: italic;
+    font-weight: normal;
+    font-family: cursive;
+}
+
+.backlog-image{
+    border: 1px solid red;
+    width: 55%;
+    height: 60vh;
+    justify-content: end;
 }

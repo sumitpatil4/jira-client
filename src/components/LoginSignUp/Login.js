@@ -15,7 +15,7 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
   const [resPopUp,setResPopUp] = useState(false);
-  const { updateIsAuthenticated } = useContext(AuthContext);
+  const { updateIsAuthenticated, } = useContext(AuthContext);
   const navigate = useNavigate();
 
 

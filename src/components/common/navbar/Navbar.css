@@ -1,17 +1,35 @@
-.outerWrapper{
+.outerWrapper {
     height: 10vh;
-    background: white;
+    background: aliceblue;
     display: flex;
     gap: 15rem;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
-    /* justify-content: space-between; */
-
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999; /* Adjust the value as needed to make sure it's above the sidebar */
+  }
+.navbar-title{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 2%;
+    width: 100%;
+    
+}
+.navbar-logo{
+    font-size: 20px;
+    font-weight: bold;
+    
+    color: rgb(10, 53, 122);
+    
 }
 .nav-links{
     display: flex;
     margin-right: 2rem;
     gap: 1rem;
-    margin-left: 30vh;
+    margin-left: 20vh;
     
 }
 /* /////////////////////////// */
@@ -161,7 +179,11 @@
 }
 
 
-
+.add-project-date{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 
 
 
