@@ -4,6 +4,7 @@ import add from "../../Images/add.png";
 import "./LandingPage.css";
 import { NavLink } from "react-router-dom";
 import { MdOutlinePending } from 'react-icons/md';
+import toDoIcon from "../../Images/task.png"
 export default function LandingPage() {
   const assignedProjects = [
     {
@@ -54,7 +55,7 @@ export default function LandingPage() {
             </Card.Text>
             <Card.Text className="cardTextStyle CardFont">
               Done issues
-              <span style={{ marginLeft: "10%",height:'5px' }}>{getRectangularChip(0)}</span>
+              <span style={{ marginLeft: "10%", height: '5px' }}>{getRectangularChip(0)}</span>
             </Card.Text>
             <Card.Text className="text-muted cardTextStyle">1 board</Card.Text>
           </Card.Body>
@@ -105,37 +106,38 @@ export default function LandingPage() {
         <div className="ToDoSection">
           <p className="ToDoHeading"> TO DO </p>
           <table className="assignedProjectsTable">
-  <tbody>
-    {assignedProjects.map((index) => {
-      return (
-        <tr className="assignedProjectsTableRow" key={index.id}>
-          <td className="firstTd">
-           <MdOutlinePending/>
-          </td>
-          <td className="centerTd">
-            <div className="assignedProjectsTableContent">
-              <div className="ProjectIssueDescContainer">
-                <span>{index.issueDescription}</span>
-              </div>
-              <div className="TableContentSubContainer">
-                <div className="ProjectNickNameContainer">
-                  {index.projectNickName}
-                  &nbsp;<span>&#183;</span>&nbsp;
-                </div>
-                <div className="ProjectNameContainer">
-                  {index.projectName}
-                </div>
-              </div>
-            </div>
-          </td>
-          <td className="lastTd">
-            <span className="ToDoWordColumn">To Do</span>
-          </td>
-        </tr>
-      );
-    })}
-  </tbody>
-</table>
+            <tbody>
+              {assignedProjects.map((index) => {
+                return (
+                  <tr className="assignedProjectsTableRow" key={index.id}>
+                    <td className="firstTd">
+                      {/* <MdOutlinePending/> */}
+                      <img src={toDoIcon} alt="todo-icon" />
+                    </td>
+                    <td className="centerTd">
+                      <div className="assignedProjectsTableContent">
+                        <div className="ProjectIssueDescContainer">
+                          <span>{index.issueDescription}</span>
+                        </div>
+                        <div className="TableContentSubContainer">
+                          <div className="ProjectNickNameContainer">
+                            {index.projectNickName}
+                            &nbsp;<span>&#183;</span>&nbsp;
+                          </div>
+                          <div className="ProjectNameContainer">
+                            {index.projectName}
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td className="lastTd">
+                      <span className="ToDoWordColumn">To Do</span>
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
 
         </div>
       </div>

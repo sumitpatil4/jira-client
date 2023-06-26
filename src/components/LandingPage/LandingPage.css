@@ -45,12 +45,13 @@
   .assignedProjectsTable td {
     padding: 10px;
     border: 1px solid #ddd;
+    border: none;
   }
   
-  .assignedProjectsTable .assignedProjectsTableRow:nth-child(even) {
-    background-color: #f2f2f2;
+  .assignedProjectsTable .assignedProjectsTableRow:hover {
+    background-color: #d9d9df;
   }
-  
+
   .assignedProjectsTableContent {
     display: flex;
     align-items: center;
@@ -80,6 +81,10 @@
   
   .firstTd {
     width: 1px;
+  }
+
+  .firstTd img{
+      height: 35px;
   }
   
   .centerTd {
