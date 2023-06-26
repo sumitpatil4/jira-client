@@ -234,7 +234,7 @@
   }
   .RecentProjectsCards::-webkit-scrollbar {
     width: 10px;
-  height: 6px;
+  height: 10px;
     
   }
   

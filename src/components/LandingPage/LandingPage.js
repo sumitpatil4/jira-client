@@ -38,7 +38,7 @@ export default function LandingPage() {
 
   function getCard(userId) {
     return (
-      <Card border="secondary" className="Card-container">
+      <Card className="Card-container">
         <div className="cardContainer">
           <Card.Body>
             <NavLink to="/backlog" className="nav-get-card">
