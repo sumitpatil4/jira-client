@@ -1,19 +1,33 @@
 import React, { useState } from 'react'
+import {Link} from 'react-router-dom'
 import './Navbar.css'
+import { useContext } from "react";
+import profile from '../../../Images/user.jpg'
 import './Dropdown.css'
+import Dropdown from "react-bootstrap/Dropdown";
 import Project from './Project'
 import YourWork from './YourWork'
 import Team from './teams/Team'
 import CreatIssue from './createIssueButton/CreatIssue'
+import { Button, Stack } from "@mui/material";
+
 export default function Navbar() {
+  //const authData = useContext(AuthContext);
+  //const userImageUrl = authData.googleData.picture;
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
+  //const navigate = useNavigate();
   let navlinks = ["Your Work", "Projects", "Teams"]
+  const unmount=()=>{
+    //navigate("/");
+    //authData.handleLogout();
+    
+  }
   return (
     <div className='outerWrapper'>
-      <div>
-        <h1 style={{ fontSize: "25px", fontWeight: "bold", color: "blue", marginTop: "1rem", marginLeft: "1.2rem" }}>Accolite Jira</h1>
+      <div className='navbar-title'>
+        <h2 className='navbar-logo' >Accolite Jira</h2>
       </div>
       <div className='menu-icon' onClick={handleClick}>
           <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
@@ -23,7 +37,10 @@ export default function Navbar() {
           {navlinks.map((curItem, index) => {
             return (
               <div class="dropdown">
-                <button onClick={closeMobileMenu} class="dropbtn">{curItem}&nbsp;<i className='fas fa-caret-down' /></button>
+                <Stack spacing={2} direction={"column"} sx={{marginTop:'10px'}}>
+                <Button variant="outline" type="submit" style={{height:'35px',whiteSpace: 'nowrap'}} onClick={closeMobileMenu}>{curItem} &nbsp;<i className='fas fa-caret-down' /></Button>
+                </Stack>
+                {/* <button onClick={closeMobileMenu} class="dropbtn">&nbsp;<i className='fas fa-caret-down' /></button> */}
                 <div className='dropdown-content'>
                   {
                     index===0?(<YourWork/>)
@@ -35,9 +52,13 @@ export default function Navbar() {
           })
           }
         </ul>
-        {/* <button className='button-style'><b>Create</b></button> */}
-        <CreatIssue/>
+
+        <Stack spacing={2} direction={"column"} sx={{marginTop:'10px'}}>
+              <CreatIssue/>
+            </Stack>
+
       </div>
+
     </div>
   )
 }
