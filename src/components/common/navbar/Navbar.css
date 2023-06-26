@@ -1,25 +1,35 @@
-.outerWrapper{
-    position:fixed;
-    height: 9.5vh;
-    background: white;
+.outerWrapper {
+    height: 10vh;
+    background: aliceblue;
     display: flex;
     gap: 15rem;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
-    width:100%;
-    /* justify-content: space-between; */
-
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999; /* Adjust the value as needed to make sure it's above the sidebar */
+  }
+.navbar-title{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 2%;
+    width: 100%;
+    
+}
+.navbar-logo{
+    font-size: 20px;
+    font-weight: bold;
+    
+    color: rgb(10, 53, 122);
+    
 }
 .nav-links{
     display: flex;
-    gap: 0rem;
-    margin-right:1rem;
-    margin-left: 15vh;
-}
-.label-style{
-    padding-left: 16.5vh;
-}
-.div-style{
-    padding-left: 5vh;
+    margin-right: 2rem;
+    gap: 1rem;
+    margin-left: 20vh;
     
 }
 /* /////////////////////////// */
@@ -244,7 +254,11 @@ background-color: white;
 }
 
 
-
+.add-project-date{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 
 
 

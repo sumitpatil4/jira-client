@@ -8,6 +8,9 @@ import Dropdown from "react-bootstrap/Dropdown";
 import Project from './Project'
 import YourWork from './YourWork'
 import Team from './teams/Team'
+import { Button, Stack } from "@mui/material";
+import CreateProject from './CreateProject'
+
 export default function Navbar() {
   //const authData = useContext(AuthContext);
   //const userImageUrl = authData.googleData.picture;
@@ -23,10 +26,8 @@ export default function Navbar() {
   }
   return (
     <div className='outerWrapper'>
-      <div>
-        <Link to='/landingpage' style={{textDecoration:'none'}}>
-        <h1 style={{fontSize:"25px",fontWeight:"bold",color:"blue",marginTop:"1rem",marginLeft:"1.2rem"}}>Accolite Jira</h1>
-        </Link>
+      <div className='navbar-title'>
+        <h2 className='navbar-logo' >Accolite Jira</h2>
       </div>
       <div className='menu-icon' onClick={handleClick}>
           <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
@@ -36,7 +37,10 @@ export default function Navbar() {
           {navlinks.map((curItem,index) => {
             return (
               <div class="dropdown">
-                <button onClick={closeMobileMenu} class="dropbtn">{curItem}&nbsp;<i className='fas fa-caret-down' /></button>
+                <Stack spacing={2} direction={"column"} sx={{marginTop:'10px'}}>
+                <Button variant="outline" type="submit" style={{height:'35px',whiteSpace: 'nowrap'}} onClick={closeMobileMenu}>{curItem} &nbsp;<i className='fas fa-caret-down' /></Button>
+                </Stack>
+                {/* <button onClick={closeMobileMenu} class="dropbtn">&nbsp;<i className='fas fa-caret-down' /></button> */}
                 <div className='dropdown-content'>
                   {
                     index===0?(<YourWork/>)
@@ -50,28 +54,10 @@ export default function Navbar() {
           })
           }
         </ul>
-        <button className='button-style'><b>Create</b></button>
-        <div className="profile">
-          <div className="NavbarDropDown">
-            <Dropdown className="MainprofileDiv">
-              <Dropdown.Toggle
-                className="profileUserName" 
-              >
-                <img
-                  className="googleImage"
-                  alt="googleImage"
-                  src={profile}
-                />
-              </Dropdown.Toggle>
-
-              <Dropdown.Menu align="end" className="NavbarDropDownMenu">
-                <Dropdown.Item href="" onClick={(e)=>{unmount()}}>
-                  <span>Logout</span>
-                </Dropdown.Item>
-              </Dropdown.Menu>
-            </Dropdown>
-          </div>
-        </div>
+        <Stack spacing={2} direction={"column"} sx={{marginTop:'10px'}}>
+              <CreateProject/>
+            </Stack>
+        
       </div>
 
     </div>
