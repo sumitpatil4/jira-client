@@ -4,7 +4,6 @@ import './introPage.css';
 import { Button } from "@mui/material";
 import jiraLogo from "../../Images/business-meeting.png"
 import illustration from "../../Images/hero-illustration.png"
-import roadmap from "../../Images/roadmap.png"
 import { useNavigate } from 'react-router-dom';
 
 const IntroPage = () => {
@@ -30,7 +29,7 @@ const IntroPage = () => {
                     <h2>Jira Software</h2>
                 </div>
                 <div className='second-bar-options'>
-                    <h4>Features</h4>
+                    <h3>Features</h3>
                 </div>
             </div>
             <div className='inner-container'>
@@ -48,43 +47,6 @@ const IntroPage = () => {
             <div className='feature-container'>
                 <div className="featureHeading">
                     <h1>Features</h1>
-                </div>
-
-                <div className='featureContent'>
-                    
-                    <div className='roadmap'>
-                        <div className='roadmap-image'>
-                            <img src={roadmap} alt='roadmap'/>
-                        </div>
-                        <div className='roadmap-text'>
-                            <h2>Roadmap</h2>
-                            <p>Roadmaps for Jira Software allows you to plan and track work strategically 
-                                across multiple teams and projects. Designed to empower teams at scale, 
-                                you can plan based on capacity, track dependencies, manage competing priorities, 
-                                and explore alternative scenarios with a single source of truth on the current 
-                                and future health of your initiatives.</p>
-                        </div>
-                    </div>
-
-                    <h2>Backlog</h2>
-                    <div className='backlog'>
-                        <div className='roadmap-text'>
-                            {/* <img src={roadmap} alt='roadmap'/> */}
-                        </div>
-                        <div className='backlog-image'>
-                            <p></p>
-                        </div>
-                    </div>
-
-                    <h2>Board</h2>
-                    <div className='board'>
-                        <div className='roadmap-image'>
-                            {/* <img src={roadmap} alt='roadmap'/> */}
-                        </div>
-                        <div className='board-text'>
-                            <p></p>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>

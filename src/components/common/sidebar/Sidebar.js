@@ -1,9 +1,5 @@
 import React from "react";
 import "./Sidebar.css";
-import { Button, Stack } from "@mui/material";
-import { AiFillProject } from 'react-icons/ai';
-import { BsFillClipboardDataFill } from 'react-icons/bs';
-import {  FaAngleDoubleLeft ,FaAngleDoubleRight} from 'react-icons/fa';
 // import { useNavigate } from "react-router-dom";
 // import { useState } from "react";
 // import Backlog from "../Backlog/Backlog";
@@ -15,30 +11,18 @@ const Sidebar = (props) => {
     <>
       <div className={sidebarClass}>
         {props.isOpen ? (
-          
-                     <FaAngleDoubleLeft className="sidebar-toggle" onClick={props.toggleSidebar}/>
+          <button onClick={props.toggleSidebar} className="sidebar-toggle">
+            <i class="fa-solid fa-angles-left"></i>
+          </button>
         ) : (
-          <FaAngleDoubleRight className="sidebar-toggle" onClick={props.toggleSidebar}/>
-          // <div onClick={props.toggleSidebar} className="sidebar-toggle">
-          //   <i className="fa-solid fa-angles-right"></i>
-          // </div>
+          <button onClick={props.toggleSidebar} className="sidebar-toggle">
+            <i class="fa-solid fa-angles-right"></i>
+          </button>
         )}
         <div className="features">
-          <div className="features-icon">
-          <Stack spacing={2} direction={"row"} sx={{marginTop:'10px'}}>
-            <div className="icon-logo">
-          <AiFillProject  />
-          </div>
-          
-              <Button variant="outline" type="submit" style={{height:'35px'}}>
-              Project Name 
-              </Button>
-            </Stack>
-            
-  
-          </div>
-          
-          
+
+          <button className="sidebar-project-name">Project Name</button>
+          <hr></hr>
           <Link to='/roadmap'>
             <button className="sidebar-roadmap-btn">
               <i class="fa-solid fa-bars-staggered"></i> &nbsp; Roadmap
@@ -54,7 +38,7 @@ const Sidebar = (props) => {
 
           <Link to='/board'>
             <button className="sidebar-board-btn">
-            <BsFillClipboardDataFill style={{marginTop:'-2%'}}/> &nbsp; Board
+            <i class="fa-solid fa-barcode"></i> &nbsp; Board
             </button>
           </Link>
          

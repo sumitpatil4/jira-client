@@ -1,17 +1,4 @@
-import React, { useContext, useEffect } from 'react'
-import { Route,Routes,useNavigate } from 'react-router-dom';
-import Login from '../LoginSignUp/Login';
-import AuthContext from '../ContextApi/AuthContext';
-// import UserProject from '../UserProject/UserProject';
-import Signup from '../LoginSignUp/Signup';
-import IntroPage from '../IntroPage/IntroPage';
-import LandingPage from '../LandingPage/LandingPage';
-import Navbar from '../common/Navbar/Navbar'                                               
-import Backlog from '../Backlog/Backlog'
-import Roadmap from '../RoadMap/Roadmap';
-import Setting from '../Setting/Setting';
-import Project from '../common/Navbar/Project';
-import Board from '../Board/Board';
+import React from 'react'
 
 const Homepage = () => {
   const { isAuthenticated,useEffectReload } = useContext(AuthContext);
