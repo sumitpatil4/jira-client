@@ -28,7 +28,8 @@ export default function LandingPage() {
             </Card.Title>
 
             <Card.ImgOverlay className="add-newproject">
-              <img src={add} alt="add" />
+              {/* <img src={add} alt="add" /> */}
+              <h1>+</h1>
             </Card.ImgOverlay>
           </NavLink>
         </div>
