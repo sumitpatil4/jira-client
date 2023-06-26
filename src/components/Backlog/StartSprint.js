@@ -2,6 +2,8 @@ import React from 'react'
 import Modal from "react-bootstrap/Modal";
 import Form from "react-bootstrap/Form";
 import { useState } from 'react';
+import './StartSprint.css';
+
 export default function StartSprint() {
     const [show, setShow] = useState(false);
     const handleClose = () => {
@@ -30,7 +32,7 @@ export default function StartSprint() {
       }
   return (
       <>
-      <button className="button7" onClick={(e) => {handleShow();  todayDate(); }}> Start Sprint
+      <button className="start-sprint-button" onClick={(e) => {handleShow();  todayDate(); }}> Start Sprint
       </button>
       <Modal
         show={show}
@@ -53,7 +55,7 @@ export default function StartSprint() {
                                 <option value="Accepted" >2 weeks</option>
                                 <option value="Awaited" >3 weeks</option>
                                 <option value="Awaited" >4 weeks</option>
-                                <option value="Awaited" >custom</option>
+                                {/* <option value="Awaited" >custom</option> */}
           </Form.Select>
           <br></br>
           <Form.Label>Start Date</Form.Label>
