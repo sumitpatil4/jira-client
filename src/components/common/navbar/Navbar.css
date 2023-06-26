@@ -14,14 +14,14 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding-left: 20px;
+    margin: 2%;
     width: 100%;
     
 }
 .navbar-logo{
     font-size: 20px;
     font-weight: bold;
-    object-fit: contain;
+    
     color: rgb(10, 53, 122);
     
 }
