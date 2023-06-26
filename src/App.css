@@ -1,0 +1,62 @@
+.popupContainer
+{
+  top:0%;
+  left:0%;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: #00000046;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* z-index: 2; */
+}
+
+.popup-boxd {
+    position: absolute;
+    background: whitesmoke;
+    width: 35vw;
+    border-radius: 3px;
+    box-shadow: 0 2px 12px 0 rgba(0,0,0,.4);
+  }
+
+  .popupHeader h2 {
+    text-align: center;
+    padding: 10px 0;
+    color: white;
+    font-weight: normal;
+    background-color:rgb(14, 20, 30);
+  }
+
+
+  .buttonsContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0px;
+  }
+  
+  .buttonsContainer>button{
+      width: fit-content;
+      border: 1px solid #0d0e0d;
+      border-radius: 3px;
+      color: #181918;
+      padding: 8px 40px;
+      font-size: 18px;
+      cursor: pointer;
+      margin:0px 40px;
+  }
+  
+  .buttonsContainer>button:hover{
+    background: #2196f3;
+    color: white;
+  }
+
+  .msgContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    font-size: 20px;
+  }

@@ -55,9 +55,9 @@ const CreateIssue = () => {
                         <FormHelperText>Required</FormHelperText>
                     </FormControl>
                     <div 
-                        style={{ display: "flex", columnGap: "5%", position: "absolute", top: "65%", left: "18%" }}
+                        style={{ display: "flex", columnGap: "15%", position: "absolute", top: "70%", left: "22%" }}
                     >
-                        <Button variant="contained"><Typography>Create Issue</Typography></Button>
+                        <Button variant="contained"><Typography>Create</Typography></Button>
                         <Button variant="contained" onClick={()=>handleClose()}>Cancel</Button>
                     </div>
                 </Box>

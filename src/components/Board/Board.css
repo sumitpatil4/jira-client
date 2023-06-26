@@ -1,13 +1,14 @@
-.setting-component{
+.board-component{
     display: flex;
     flex-direction: column;
+    margin-top: 3.8rem;
 }
 
-.setting-area{
+.board-area{
     background:linear-gradient(rgba(151, 168, 216, 0.8),transparent);
     height: 100vh;
     margin-left: 15.2%;
-    margin-top: 1%;
+    margin-top: 0%;
 }
 
 .heading{

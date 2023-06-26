@@ -1,26 +1,38 @@
-import React from 'react'
-import '../Navbar/index.css'
-import '../Navbar/Dropdown.css'
+import React, { useState } from 'react'
+import './Navbar.css'
+import './Dropdown.css'
 import Project from './Project'
 import YourWork from './YourWork'
-import Team from './Team'
+import Team from './teams/Team'
+import { Button, Stack } from "@mui/material";
+import CreateProject from './CreateProject'
+
 export default function Navbar() {
+  const [click, setClick] = useState(false);
+  const handleClick = () => setClick(!click);
+  const closeMobileMenu = () => setClick(false);
   let navlinks = ["Your Work", "Projects", "Teams"]
   return (
     <div className='outerWrapper'>
-      <div>
-        <h1 style={{fontSize:"25px",fontWeight:"bold",color:"blue",marginTop:"1rem",marginLeft:"1.2rem"}}>Accolite Jira</h1>
+      <div className='navbar-title'>
+        <h2 className='navbar-logo' >Accolite Jira</h2>
+      </div>
+      <div className='menu-icon' onClick={handleClick}>
+          <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
       </div>
       <div className='nav-links'>
         <ul className='nav-links'>
           {navlinks.map((curItem,index) => {
             return (
               <div class="dropdown">
-                <button class="dropbtn">{curItem}</button>
+                <Stack spacing={2} direction={"column"} sx={{marginTop:'10px'}}>
+                <Button variant="outline" type="submit" style={{height:'35px',whiteSpace: 'nowrap'}} onClick={closeMobileMenu}>{curItem} &nbsp;<i className='fas fa-caret-down' /></Button>
+                </Stack>
+                {/* <button onClick={closeMobileMenu} class="dropbtn">&nbsp;<i className='fas fa-caret-down' /></button> */}
                 <div className='dropdown-content'>
                   {
-                    index==0?(<Project/>)
-                    :index==1?(<YourWork/>):(<Team/>)
+                    index===0?(<YourWork/>)
+                    :index===1?(<Project/>):(<Team/>)
                   }
                 
                 </div>
@@ -30,7 +42,10 @@ export default function Navbar() {
           })
           }
         </ul>
-        <button  style={{height:"2.5rem",width:"2rem",borderRadius:"10%",background:"blue",color:"white",marginTop:"10px",fontWeight:"bold",width:"60px"}}>Create</button>
+        <Stack spacing={2} direction={"column"} sx={{marginTop:'10px'}}>
+              <CreateProject/>
+            </Stack>
+        
       </div>
     </div>
   )
