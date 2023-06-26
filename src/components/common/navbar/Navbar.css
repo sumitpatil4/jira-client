@@ -1,24 +1,16 @@
-.outerWrapper{
-    position:fixed;
-    height: 9.5vh;
-    background: white;
+.outerWrapper {
+    height: 10vh;
+    background: aliceblue;
     display: flex;
     gap: 15rem;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
-    width:100%;
-    /* justify-content: space-between; */
-
-}
-.navbar{
-    height: 10vh;
-    background-color: #ffffff;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
     position: fixed;
     width: 100%;
-    display: flex;
-}
-
+    top: 0;
+    z-index: 999; /* Adjust the value as needed to make sure it's above the sidebar */
+  }
 .container {
-    max-width: 1500px;
+    max-width: 1700px;
     margin: 0 auto;
     padding: 0 15px;
     display: flex;
@@ -26,37 +18,52 @@
     align-items: center;
     height: 100%;
   }
-.nav-links{
+.navbar-title{
     
     display: flex;
-    justify-content: space-between;
-    margin-left: 20vh;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: -2%;
+    width: 100%;
+    
 }
 
   
-.label-style{
-    padding-left: 16.5vh;
-}
-.div-style{
-    padding-left: 5vh;
+.navbar-logo{
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(10, 53, 122);
     
 }
+
+.nav-links {
+    display: flex;
+    margin-right: 2rem;
+    gap: 1rem;
+    margin-left: 20vh;
+    
+}
+
 /* /////////////////////////// */
-.projectOuterWrapper{
-    
+.projectOuterWrapper {
+
     background-color: white;
     min-width: 18rem;
     padding-top: 2vh;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     border-radius: 6px;
 }
+
 .menu-icon {
     display: none;
 }
-.btn{
+
+.btn {
     font-weight: 500;
     width: 100%;
 }
+
 .btn:hover {
     background: rgb(250, 248, 248);
 }
@@ -86,15 +93,17 @@
         border: 3px solid rgb(156, 156, 156);
       
 }
-.yourWorkWrapper{
+
+.yourWorkWrapper {
     background-color: white;
     width: 25vw;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     border-radius: 6px;
     /* z-index: 1; */
-    
+
 }
-.btn-div{
+
+.btn-div {
     height: 20vh;
     
     overflow: scroll;
@@ -126,27 +135,30 @@
 }
 
 .profileUserName{
-    background-color: white;
+    background-color: aliceblue;;
     border: none;
     height:fit-content;
     
   }
   .btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active {
     /* color: var(--bs-btn-active-color); */
-    background-color: white ;
+    background-color: aliceblue; ;
 }
 
   .profile {
-    background-color: rgb(253, 253, 253);
+    background-color:aliceblue;;
     opacity:1;
     width: 0%;
     height: 8vh;
     display: flex;
-    margin-left:20vh;
-    padding-top: 0vh;
+    margin-left:3vh;
+    padding-top: 1vh;
+  }
+  .margin-setup{
+    margin-top: 2vh;
   }
   .profileUserName :hover {
-   background-color: white;
+   background-color: aliceblue;
   }
   
 .googleImage{
@@ -174,15 +186,28 @@
     font-weight: bold;
  }
 
- .team-header{
+.yourWork-btn .btn-3:hover {
+    color: blue;
+}
+
+.yourWork-btn .btn-1:hover {
+    color: blue;
+}
+
+.yourWork-btn .btn-2:hover {
+    color: blue;
+}
+
+.team-header {
     display: grid;
     margin-bottom: 10px;
 
- }
- .teamWrapper{
+}
+
+.teamWrapper {
     height: 100px;
     width: 250px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     background-color: white;
     border-radius: 6px;
 
@@ -219,50 +244,129 @@
 
   
 /* //createissue */
-.createIssueWrapper{
-   background-color: green;
-   width: 50%;
-   margin: auto;
-   height: 70vh;
-   overflow: scroll;
-   margin-top: 70px;
-   overflow-x: hidden;
-   padding-right: 25%;
-   padding-left: 2%;
+
+.CreateIssueModalWidth {
+    width: 50vw;
+    max-width: 50vw;
+    max-height: 85vh;
 }
-.child{
-    /* margin-right: 50%; */
-    /* width: 100%; */
-    /* background-color: re; */
-    /* padding-right: 150px; */
+
+.createIssueWrapper {
+    background-color: green;
+    width: 50%;
+    margin: auto;
+    height: 70vh;
+    overflow: scroll;
+    margin-top: 70px;
+    overflow-x: hidden;
+    padding-right: 25%;
+    padding-left: 2%;
 }
-.dropdown-options{
-    /* border-color: blue;
-    border-radius: 2px; */
-    
+
+.getRedAsterik:after {
+    content: "*";
+    color: red;
 }
-.label{
-    
+
+.labelHeading {
+    font-size: 0.857143em;
+    font-style: inherit;
+    line-height: 1.33333;
+    font-weight: var(--ds-font-weight-semibold, 500);
+    color: var(--ds-text-subtle, var(--ds-text-subtlest, #6B778C));
+    display: block;
+    margin-top: 0px;
+    margin-bottom: 4px;
+}
+
+.topMargin {
+    margin-top: 5%;
+}
+
+.fiveDotRule {
+    width: 15%;
+    border-style: dotted none none;
+    border-width: 6px;
+    border-color: #a7a7a3;
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 1%;
+}
+
+.verySmallText {
+    font-size: xx-small;
+    margin-top: 1.5%;
+    display: block;
+    color: #6d6d6a;
+}
+
+.smallText {
+    font-size: small;
+    margin-top: 1.5%;
+    display: block;
+    color: #6d6d6a;
+}
+
+.normalFont {
+    font-size: small;
+    color: #0052CC;
+    font-weight: 500;
+}
+
+.normalFont:hover {
+    cursor: pointer;
+}
+
+
+.descriptionFeaturesContainer {
+    /* text-align: center; */
+    /* margin-left: auto;
+    margin-right: auto; */
+    margin-top: 1%;
+}
+
+
+.label {
     font-weight: bold;
     color: rgb(255, 255, 255);
 }
-.createIssue-Header{
-    /* display: flex;
-    justify-content: space-between;
-    height: 7vh;
-    position: fixed;
-    width: 50%;
-    margin: auto;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
-  /* display: flex; */
-  /* justify-content:space-between; */
+
+.CreateIssueCancelButton {
+    cursor: pointer;
+    font-size: 0.8em;
+    font-style: inherit;
+    line-height: 1.33333;
+    font-weight: var(--ds-font-weight-semibold, 500);
+    color: var(--ds-text-subtle, var(--ds-text-subtlest, #6B778C));
+    margin-right: 4%;
 }
 .NavbarDropDown{
 background-color: white;
 }
 
+.CreateIssueCancelButton:hover {
+    text-decoration: underline;
+}
 
-
+.CreateIssueCreateButton {
+    cursor: pointer;
+    width: 5vw;
+    height: 5vh;
+    background-color: #0052CC;
+    border-radius: 3px;
+    color: white;
+    font-size: 0.9em;
+    font-style: inherit;
+    font-weight: var(--ds-font-weight-semibold, 600);
+    padding-left: 1.8%;
+    padding-top: 0.8%;
+    margin-right: 2%;
+}
+.add-project-date{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 
 
 

@@ -1,45 +1,43 @@
 import React, { useState } from 'react'
-import {Link} from 'react-router-dom'
 import './Navbar.css'
-import { useContext } from "react";
-import profile from '../../../Images/user.jpg'
 import './Dropdown.css'
+import {Link} from 'react-router-dom';
 import Dropdown from "react-bootstrap/Dropdown";
 import Project from './Project'
 import YourWork from './YourWork'
 import Team from './teams/Team'
-import AuthContext from '../../ContextApi/AuthContext.js'
+import { Button, Stack } from "@mui/material";
+import CreateProject from './CreateProject'
+import CreatIssue from './createIssueButton/CreatIssue'
+// import Dropdown from 
+import profile from '../../../Images/user.jpg'
 export default function Navbar() {
-  const [showNavbar, setShowNavbar] = useState(false)
-
-  const handleShowNavbar = () => {
-    setShowNavbar(!showNavbar)
-  }
-
-  const authData = useContext(AuthContext);
-  const userImageUrl = authData.userpicture;
+  //const authData = useContext(AuthContext);
+  //const userImageUrl = authData.googleData.picture;
   const [click, setClick] = useState(false);
-  //const navigate = useNavigate();
+  const handleClick = () => setClick(!click);
+  const closeMobileMenu = () => setClick(false);
   let navlinks = ["Your Work", "Projects", "Teams"]
-  const unmount=()=>{
-    //navigate("/");
-    //authData.handleLogout();
-    
-  }
   return (
-    <nav className="navbar">
-    <div className="container">
-    <div>
-      <Link to='/landingpage' style={{textDecoration:'none'}}>
-       <h2 style={{fontSize:"25px",fontWeight:"bold",color:"blue",marginTop:"-1.5rem",marginLeft:"1rem",position:"fixed"}} className="dropdown">Accolite Jira</h2>
-       </Link>
-    </div>
+    <div className='outerWrapper'>
+      <div className='container'>
+      <div className='navbar-title'>
+        <Link to='/landingpage' style={{textDecoration:'none'}}>
+        <h2 className='navbar-logo'>Accolite Jira</h2>
+        </Link>
+      </div>
+      <div className='menu-icon' onClick={handleClick}>
+          <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
+      </div>
       <div className='nav-links'>
         <ul className='nav-links'>
           {navlinks.map((curItem,index) => {
             return (
               <div class="dropdown">
-                <button class="dropbtn">{curItem}&nbsp;<i className='fas fa-caret-down' /></button>
+                <Stack spacing={2} direction={"column"} sx={{marginTop:'10px'}}>
+                <Button variant="outline" type="submit" style={{height:'35px',whiteSpace: 'nowrap'}} onClick={closeMobileMenu}>{curItem} &nbsp;<i className='fas fa-caret-down' /></Button>
+                </Stack>
+                {/* <button onClick={closeMobileMenu} class="dropbtn">&nbsp;<i className='fas fa-caret-down' /></button> */}
                 <div className='dropdown-content'>
                   {
                     index===0?(<YourWork/>)
@@ -52,9 +50,11 @@ export default function Navbar() {
             )
           })
           }
-        <div>
-        <button className='button-style'><b>Create</b></button>
+        <div className="margin-setup">
+       <CreatIssue/>
         </div>
+       
+        
         <div>
         <div className="profile drop-btn">
           <div className="NavbarDropDown">
@@ -70,7 +70,7 @@ export default function Navbar() {
               </Dropdown.Toggle>
 
               <Dropdown.Menu align="end" className="NavbarDropDownMenu">
-                <Dropdown.Item href="" onClick={(e)=>{unmount()}}>
+                <Dropdown.Item href="">
                   <span>Logout</span>
                 </Dropdown.Item>
               </Dropdown.Menu>
@@ -81,6 +81,7 @@ export default function Navbar() {
         </ul>
       </div>
       </div>
-    </nav>
+      </div>
+  
   )
 }
