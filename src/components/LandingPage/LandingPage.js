@@ -38,7 +38,7 @@ export default function LandingPage() {
 
   function getCard(userId) {
     return (
-      <Card border="secondary" style={{ width: "14rem", height: "12.5rem" }}>
+      <Card border="secondary" className="Card-container">
         <div className="cardContainer">
           <Card.Body>
             <NavLink to="/backlog" className="nav-get-card">
@@ -53,9 +53,8 @@ export default function LandingPage() {
             </Card.Text>
             <Card.Text className="cardTextStyle CardFont">
               Done issues
-              <span style={{ marginLeft: "50%" }}>{getRectangularChip(0)}</span>
+              <span style={{ marginLeft: "10%",height:'5px' }}>{getRectangularChip(0)}</span>
             </Card.Text>
-            <hr style={{ height: "1px", color: "lightgray" }} />
             <Card.Text className="text-muted cardTextStyle">1 board</Card.Text>
           </Card.Body>
         </div>

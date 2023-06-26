@@ -1,6 +1,7 @@
 .LandingPage{
     padding: 1rem;
-    margin:0 2%
+    margin:0 2%;
+    margin-top: 3.8rem;
 }
 .LandingMainHeading h4{
     color: rgb(13, 72, 160);
@@ -176,7 +177,7 @@
 }
 .add-project{
     width: 11rem;
-    height: 12.5rem;
+    height: 11rem;
     border: 2px solid rgb(4, 4, 104);
 }
 .add-project-nav{
@@ -192,6 +193,12 @@
     color: rgb(28, 71, 181);
     margin-bottom: 1rem;
 
+}
+
+.Card-container{
+  border-left: 20px solid #b3f5ff; 
+  width: 13rem;
+    height: 11rem;
 }
 .cardContainer-addproject{
     height: 100%;
