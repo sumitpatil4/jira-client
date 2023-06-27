@@ -9,7 +9,7 @@ import { HTML5Backend } from "react-dnd-html5-backend";
 import EditSprint from './EditSprint';
 import CreateIssue from './CreateIssue';
 import SprintSection from './SprintSection';
-import Sidebar from '../common/Sidebar';
+// import Sidebar from '../common/Sidebar';
 import BacklogSection from './BacklogSection';
 
 export default function BacklogLowerChild(props) {
