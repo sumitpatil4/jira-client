@@ -3,6 +3,7 @@ import Modal from "react-bootstrap/Modal";
 import Form from "react-bootstrap/Form";
 import { useState } from 'react';
 import './StartSprint.css';
+import { Button, Stack } from '@mui/material';
 export default function EditSprint() {
     const [show, setShow] = useState(false);
     const handleClose = () => {
@@ -42,6 +43,7 @@ export default function EditSprint() {
         onHide={handleClose}
         backdrop="static"
         keyboard={false}
+        onClick={(e)=>{handleButtonClick(e);}}
       >
         <Modal.Header>
           <Modal.Title>Update Sprint</Modal.Title>
@@ -49,7 +51,11 @@ export default function EditSprint() {
         <Modal.Body>
           <Form>
           <Form.Label>Sprint Name</Form.Label><br></br>
-          <input type = "text"></input><br></br>
+          <Form.Control
+            as="textarea"
+            rows={1}
+           placeholder="Enter your text here..."/>
+           <br></br>
           <Form.Label>Duration</Form.Label>
           <Form.Select aria-label="Default select example" name="result" >
                                 <option>Select from below</option>
@@ -73,9 +79,10 @@ export default function EditSprint() {
 
         </Modal.Body>
         <Modal.Footer>
-           <button className='button3' form="update" onClick={(e) => { handleClose(); handleButtonClick(e);}}
-            >Update</button>
-            <button className='button3' onClick={(e)=>{handleClose(); handleButtonClick(e);}}>Cancel</button> &nbsp;
+        <Stack spacing={2} direction={"row"} sx={{marginTop:'10px'}}>
+            <Button variant="outlined" type="submit" style={{height:'35px',whiteSpace: 'nowrap'}} onClick={(e) => { handleClose(); handleButtonClick(e); }}>Start</Button>
+            <Button variant="outlined" type="submit" style={{height:'35px',whiteSpace: 'nowrap'}} onClick={(e)=>{handleClose(); handleButtonClick(e);}}>Cancel</Button>
+            </Stack>
         </Modal.Footer>
       </Modal>
     </>
