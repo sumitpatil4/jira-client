@@ -6,6 +6,9 @@
 .LandingMainHeading h4{
     color: rgb(13, 72, 160);
 }
+.LandingMainHeading{
+    margin-top: 1%;
+}
 .LandingSubHeading {
     margin-bottom: 1%;
 }
@@ -52,13 +55,10 @@
     background-color: #d9d9df;
   }
 
-.assignedProjectsTableRow :hover {
-    background-color: #0052CC;
-      .assignedProjectsTableContent {
-      display: flex;
-      align-items: center;
+  .assignedProjectsTableContent {
+    display: flex;
+    align-items: center;
   }
-}
   
   .ProjectIssueDescContainer {
     flex-grow: 1;

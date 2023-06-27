@@ -2,10 +2,11 @@
     background-color: #fdffff;
     color: rgb(156, 156, 156);
     padding: 16px;
-    font-size: 16px;
+    font-size: 14px;
     border: none;
     font-weight: bold;
-    height: 4.2rem;
+    height: 3.5rem;
+    width:7.5rem;
   }
   
   .dropdown {
@@ -29,8 +30,11 @@
     display: block;
   }
   
-  .dropdown-content a:hover {background-color: #ddd;}
+  .dropdown-content a:hover {background-color: #ddd;
+  }
   
-  .dropdown:hover .dropdown-content {display: block;}
+  .dropdown:hover .dropdown-content {display: block;
+    }
   
-  .dropdown:hover .dropbtn {background-color: #f3efef;}
+  .dropdown:hover .dropbtn {background-color: #f3efef; font-weight:bold;
+    color:blue;}

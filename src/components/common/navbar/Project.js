@@ -1,13 +1,13 @@
 import React from 'react'
-
+import {Link} from 'react-router-dom'
 export default function Project() {
     let ListOfProjects=["Project1","Project2","Project3"]
   return (
     <div className='projectOuterWrapper'>
         <div>
-           <label style={{fontWeight:"bold",color:"gray"}}>RECENT</label><hr/>
+           <label className='label-style'>RECENT</label><hr/>
            {ListOfProjects.map((curProject)=>{
-             return (<div>
+             return (<div className='div-style'>
                 {curProject}
              </div>)
            })
@@ -15,7 +15,10 @@ export default function Project() {
         </div><hr/>
         <div>
             <button className='btn'>View all Projects</button>
-            <button className='btn'>Creat Project</button>
+            <hr/>
+            <Link to='/create-project'>
+            <button className='btn' >Create Project</button>
+            </Link>
         </div>
     </div>
   )

@@ -4,6 +4,10 @@ import './Dropdown.css'
 import Project from './Project'
 import YourWork from './YourWork'
 import Team from './teams/Team'
+import { Button, Stack } from "@mui/material";
+import CreateProject from './CreateProject'
+import CreatIssue from './createIssueButton/CreatIssue'
+
 export default function Navbar() {
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
@@ -17,15 +21,15 @@ export default function Navbar() {
       <div className='menu-icon' onClick={handleClick}>
           <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
       </div>
-      <div className='menu-icon' onClick={handleClick}>
-          <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
-      </div>
       <div className='nav-links'>
         <ul className='nav-links'>
           {navlinks.map((curItem,index) => {
             return (
               <div class="dropdown">
-                <button onClick={closeMobileMenu} class="dropbtn">{curItem}&nbsp;<i className='fas fa-caret-down' /></button>
+                <Stack spacing={2} direction={"column"} sx={{marginTop:'10px'}}>
+                <Button variant="outline" type="submit" style={{height:'35px',whiteSpace: 'nowrap'}} onClick={closeMobileMenu}>{curItem} &nbsp;<i className='fas fa-caret-down' /></Button>
+                </Stack>
+                {/* <button onClick={closeMobileMenu} class="dropbtn">&nbsp;<i className='fas fa-caret-down' /></button> */}
                 <div className='dropdown-content'>
                   {
                     index===0?(<YourWork/>)
@@ -39,7 +43,10 @@ export default function Navbar() {
           })
           }
         </ul>
-        <button className='button-style'><b>Create</b></button>
+        <Stack spacing={2} direction={"column"} sx={{marginTop:'10px'}}>
+              <CreatIssue />
+            </Stack>
+        
       </div>
     </div>
   )

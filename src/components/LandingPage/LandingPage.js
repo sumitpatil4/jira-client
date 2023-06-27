@@ -1,9 +1,10 @@
-import React from 'react'
-import Card from 'react-bootstrap/Card';
+import React from "react";
+import Card from "react-bootstrap/Card";
+import add from "../../Images/add.png";
+import "./LandingPage.css";
+import { NavLink } from "react-router-dom";
+import { MdOutlinePending } from 'react-icons/md';
 import toDoIcon from "../../Images/task.png"
-import './LandingPage.css'
-import { NavLink } from 'react-router-dom';
-
 export default function LandingPage() {
   const assignedProjects = [
     {
