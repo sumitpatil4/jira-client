@@ -1,22 +1,30 @@
 import React, { useState } from 'react'
 import './Navbar.css'
 import './Dropdown.css'
+import {Link} from 'react-router-dom';
+import Dropdown from "react-bootstrap/Dropdown";
 import Project from './Project'
 import YourWork from './YourWork'
 import Team from './teams/Team'
 import { Button, Stack } from "@mui/material";
 import CreateProject from './CreateProject'
 import CreatIssue from './createIssueButton/CreatIssue'
-
+// import Dropdown from 
+import profile from '../../../Images/user.jpg'
 export default function Navbar() {
+  //const authData = useContext(AuthContext);
+  //const userImageUrl = authData.googleData.picture;
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
   let navlinks = ["Your Work", "Projects", "Teams"]
   return (
     <div className='outerWrapper'>
+      <div className='container'>
       <div className='navbar-title'>
-        <h2 className='navbar-logo' >Accolite Jira</h2>
+        <Link to='/landingpage' style={{textDecoration:'none'}}>
+        <h2 className='navbar-logo'>Accolite Jira</h2>
+        </Link>
       </div>
       <div className='menu-icon' onClick={handleClick}>
           <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
@@ -42,12 +50,38 @@ export default function Navbar() {
             )
           })
           }
-        </ul>
-        <Stack spacing={2} direction={"column"} sx={{marginTop:'10px'}}>
-              <CreatIssue />
-            </Stack>
+        <div className="margin-setup">
+       <CreatIssue/>
+        </div>
+       
         
+        <div>
+        <div className="profile drop-btn">
+          <div className="NavbarDropDown">
+            <Dropdown className="MainprofileDiv">
+              <Dropdown.Toggle
+                className="profileUserName" 
+              >
+                <img
+                  className="googleImage"
+                  alt="googleImage"
+                  src={profile}
+                />
+              </Dropdown.Toggle>
+
+              <Dropdown.Menu align="end" className="NavbarDropDownMenu">
+                <Dropdown.Item href="">
+                  <span>Logout</span>
+                </Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
+          </div>
+        </div>
+        </div>
+        </ul>
       </div>
-    </div>
+      </div>
+      </div>
+  
   )
 }

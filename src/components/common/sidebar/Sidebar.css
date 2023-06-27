@@ -53,8 +53,8 @@
 
 .sidebar {
     position: fixed;
-    margin-top:0.50%;
-    left: -15vw;
+    margin-top:0.05%;
+    left: -16vw;
     height: 100vh;
     width: 16vw;
     transition: left 0.3s ease-in-out;
