@@ -1,3 +1,13 @@
+
 .start-sprint-button{
-  margin-left: 30rem;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(-150%, -50%);
 }
+ .edit-sprint-button{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(-10%, -50%);
+ }

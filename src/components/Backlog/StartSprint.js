@@ -30,9 +30,13 @@ export default function StartSprint() {
         }
         setCurrentDate(date);
       }
+      const handleButtonClick = (event) => {
+        event.stopPropagation();
+        // Add your button click logic here
+      };
   return (
       <>
-      <button className="start-sprint-button" onClick={(e) => {handleShow();  todayDate(); }}> Start Sprint
+      <button className="start-sprint-button" onClick={(e) => {handleShow();  todayDate(); handleButtonClick(e); }}> Start Sprint
       </button>
       <Modal
         show={show}
@@ -68,9 +72,9 @@ export default function StartSprint() {
            </Form>
         </Modal.Body>
         <Modal.Footer>
-           <button className='button3' form="update" onClick={() => { handleClose(); }}
+           <button className='button3' form="update" onClick={(e) => { handleClose(); handleButtonClick(e); }}
             >Start</button>
-            <button className='button3' onClick={handleClose}>Cancel</button> &nbsp;
+            <button className='button3' onClick={(e)=>{handleClose(); handleButtonClick(e);}}>Cancel</button> &nbsp;
         </Modal.Footer>
       </Modal>
     </>

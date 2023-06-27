@@ -21,11 +21,8 @@ export default function SprintSection(props) {
         <div className='sprintAccordian'>
           <Accordion defaultActiveKey={['0']} alwaysOpen>
             <Accordion.Item eventKey="0">
-              <Accordion.Header>Sprint 
-                <button className="addDates" variant="primary" onClick={handleButtonClick}>
-                  <i class="fa-solid fa-pencil"></i>Add Dates 
-                  </button> 
-                  <StartSprint />
+              <Accordion.Header className="accordion-header">Sprint 
+                  <span><StartSprint /></span>
                   <span><EditSprint /></span>
                   </Accordion.Header>
               <Accordion.Body>
