@@ -5,9 +5,9 @@
     flex-direction: column;
     margin-bottom: 5rem;
     background:linear-gradient(rgba(151, 168, 216, 0.8),transparent);
-    /* border: 2px solid black; */
     margin-left: 15%;
     transition: margin-left 0.3s ease-in-out;
+    margin-top: 3.8rem;
 }
 
 .main-container-sidebar-not-open{
@@ -19,6 +19,7 @@
     background:linear-gradient(rgba(151, 168, 216, 0.8),transparent);
     /* border: 2px solid black; */
     transition: margin-left 0.3s ease-in-out;
+    margin-top: 3.8rem;
 }
 
 .first-container{
@@ -31,10 +32,12 @@
     margin-left: 3rem;
     margin-right: 0.8rem;
     margin-bottom: 0.8rem;
-    /* display: flex;
-    flex-direction: column; */
 }
-
+.second-container input{
+    border-radius: 10px;
+    padding: 3px;
+    border: 1px solid rgb(131, 131, 131);
+}
 .backlog-subheading{
     margin-top: -0.8rem;
 }
