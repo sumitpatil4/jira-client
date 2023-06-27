@@ -1,8 +1,9 @@
 import React from 'react'
 import Card from 'react-bootstrap/Card';
-
+import toDoIcon from "../../Images/task.png"
 import './LandingPage.css'
 import { NavLink } from 'react-router-dom';
+
 export default function LandingPage() {
   const assignedProjects = [
     {

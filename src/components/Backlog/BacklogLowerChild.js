@@ -25,8 +25,8 @@ export default function BacklogLowerChild(props) {
               <Accordion.Header>Backlog <button className="addDates" variant="primary" onClick={handleButtonClick}><i class="fa-solid fa-pencil"></i>Add Dates </button> </Accordion.Header>
               <Accordion.Body>
                 <DragAndDropArea />
-                <IssueList />
-                <CreateIssue />
+                <IssueList/>
+                <CreateIssue/>
               </Accordion.Body>
             </Accordion.Item>
           </Accordion>
