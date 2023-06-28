@@ -108,6 +108,15 @@
     margin-right: 50rem;
 }
 
+.assignedProjectsTableRow:hover {
+    .ProjectNameContainer {
+        color: white
+    }
+    .ProjectNickNameContainer {
+        color: white
+    }
+}
+
 .TableContentSubContainer {
     display: flex;
     flex-wrap: wrap;

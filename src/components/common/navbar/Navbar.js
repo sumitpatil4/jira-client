@@ -20,7 +20,7 @@ export default function Navbar() {
   let navlinks = ["Your Work", "Projects", "Teams"]
   return (
     <div className='outerWrapper'>
-      <div className='container'>
+      <div className='container1'>
       <div className='navbar-title'>
         <Link to='/landingpage' style={{textDecoration:'none'}}>
         <h2 className='navbar-logo'>Accolite Jira</h2>

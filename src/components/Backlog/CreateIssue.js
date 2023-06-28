@@ -1,0 +1,79 @@
+import React, { useState } from 'react'
+import AddIcon from '@mui/icons-material/Add';
+import { Button, Box, Divider, TextField, Select, MenuItem, FormControl, InputLabel, FormHelperText, Typography } from '@mui/material';
+import Modal from '@mui/material/Modal';
+import './CreateIssue.css'
+import Issue from './Issue';
+
+const CreateIssue = () => {
+
+    const [open, setOpen] = React.useState(false);
+    const [status, setStatus] = useState('TODO');
+
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => setOpen(false);
+
+    const handleChange = (event) => {
+        setStatus(event.target.value);
+    };
+
+    return (
+        <div className='create-Issue-Wrapper'>    
+            <Button 
+                className = 'create-Issue-Btn'
+                sx = {{ border: 'none', paddingRight: '82%', width: '100%' }}
+                variant="outlined" startIcon={<AddIcon />}
+                onClick={handleOpen}>
+                Create Issue
+            </Button>
+            <Modal
+                open={open}
+                onClose={handleClose}
+                aria-labelledby="modal-modal-title"
+                aria-describedby="modal-modal-description" 
+            >
+                <Box 
+                    sx={{ borderRadius: "2%" , width: "25%", height: "55%", backgroundColor: "white", position: "absolute", top: "20%", left: "35%"}}>
+                    <Typography 
+                        variant='h4'
+                        sx = {{ position: "absolute", top: "2%", left: "4%" }}
+                    >Create Issue</Typography>
+                    <hr 
+                        style={{ marginTop: "18%" }} 
+                    />
+                    <Typography sx={{ color: 'grey', position: "absolute", top: "22%", left: "5%" }}>Issue title</Typography>
+                    <TextField 
+                        sx={{ position: "absolute", width: "90%", top: "28%", left: "5%"}}
+                        id="outlined-basic" 
+                        variant="outlined" />
+                     <FormControl required sx={{ m: 1, minWidth: 120, width: "90%" , position: "absolute", top: "47%", left: "3%" }}>
+                        <InputLabel id="demo-simple-select-required-label">Status</InputLabel>
+                            <Select
+                            labelId="demo-simple-select-required-label"
+                            id="demo-simple-select-required"
+                            value={status}
+                            label="Status *"
+                            onChange={handleChange}
+                            >
+                                <MenuItem value={"TODO"}>TODO</MenuItem>
+                                <MenuItem value={"IN PROGRESS"}>IN PROGRESS</MenuItem>
+                                <MenuItem value={"DONE"}>DONE</MenuItem>
+                            </Select>
+                        <FormHelperText>Required</FormHelperText>
+                    </FormControl>
+                    <hr 
+                         style={{ marginTop: "65%" }} 
+                    />
+                    <div 
+                        style={{ display: "flex", columnGap: "10%", position: "absolute", top: "85%", left: "40%" }}
+                    >
+                        <Button variant="outlined"><Typography>Create</Typography></Button>
+                        <Button variant="outlined" onClick={()=>handleClose()}>Cancel</Button>
+                    </div>
+                </Box>
+            </Modal>
+        </div>
+    )
+}
+
+export default CreateIssue

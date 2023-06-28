@@ -14,7 +14,7 @@ function BacklogUpperChild(props) {
         <div className='second-container'>
          <input placeholder='Search backlog' />
          <i className="fa-solid fa-magnifying-glass search-icon"></i>
-         <AddTeam />
+         <AddTeam projectId = {props.projectId}/>
          <AddPeople />
         </div>
         <div className='third-container'>
