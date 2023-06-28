@@ -6,25 +6,23 @@ import { Button, Stack } from "@mui/material";
 import axios from "axios";
 
 export default function AddPeople() {
+
   const [show, setShow] = useState(false);
   const handleClose = () => {
     setShow(false);
   };
   const handleShow = () => setShow(true);
   const [teams, setTeams] = useState([]);
-
   const [currentDate, setCurrentDate] = useState();
   var dateValue = new Date();
-
   const [addPeople, setAddPeople] = useState({
-    teamId: team_id,
     email: "",
-    roleId: "",
-    endDate: "",
     capacity: null,
+    endDate: "",
+    roleId: null,
   });
-
-  const [team_id, setTeam_Id] = useState(null);
+  const[teamId, setTeamId] = useState(null);
+  
 
   const todayDate = () => {
     var today = new Date();
@@ -58,6 +56,33 @@ export default function AddPeople() {
     setCurrentDate(date);
   };
 
+  const handleChangeTeamIDValue = (e) => {
+    setTeamId(e.target.value );
+    console.log("MRIDUL " + e.target.value + "  TeamID  " + teamId );
+  };
+
+  const handleChangeRoleIdValue = (e) => {
+    setAddPeople({ ...addPeople, [e.target.name]: e.target.value });
+    console.log("MRIDUL " + e.target.name + "  RoleID  " + e.target.value );
+  };
+
+  const handleChangeEmailValue = (e) => {
+    setAddPeople({ ...addPeople, [e.target.name]: e.target.value });
+    console.log("MRIDUL " + e.target.name + "  EmailID  " + e.target.value );
+  };
+
+  const handleChangeEndDateValue = (e) => {
+    setAddPeople({ ...addPeople, [e.target.name]: e.target.value });
+    console.log("MRIDUL " + e.target.name + "  EndDate  " + e.target.value );
+  };
+
+  const handleChangeCapacityValue = (e) => {
+    setAddPeople({ ...addPeople, [e.target.name]: e.target.value });
+    console.log("MRIDUL " + e.target.name + "  Capacity  " + e.target.value );
+  };
+
+  console.log(addPeople.teamId);
+
   const handleGetTeamsAPI = async (e) => {
     await axios.get("http://localhost:4545/api/teams").then((response) => {
       console.log(response.data);
@@ -65,8 +90,12 @@ export default function AddPeople() {
     });
   };
 
-  const handleAddUserToTeamAPI = async (e, teamId) => {
-    await axios.post(`http://localhost:4545/api/assignToProject/team/${teamId}`);
+  const handleAddUserToTeamAPI = async () => {
+    await axios.post(`http://localhost:4545/api/assignToProject/team/${teamId}`, addPeople)
+    .then((response) => {
+      console.log(addPeople);
+      console.log(response.data);
+    });
   }
 
   return (
@@ -93,24 +122,28 @@ export default function AddPeople() {
         </Modal.Header>
         <Modal.Body>
           <Form className="user-assign">
+            
             <Form.Label>Team</Form.Label>
-            <Form.Select style={{ marginBottom: "10px" }}>
+            <Form.Select name = "teamId" style={{ marginBottom: "10px" }} onChange={handleChangeTeamIDValue.bind(this)}>
               <option>Please select a team</option>
               {teams.map((value) => (
-                <option key={value.id}>{value.name}</option>
+                <option value={value.id} key={value.id}>{value.name}</option>
               ))}
             </Form.Select>
+
             <Form.Label>Names or Emails</Form.Label>
             <br></br>
             <input
               style={{ marginBottom: "10px" }}
               className="search-input"
               placeholder="eg:Mridul; mridul@accolitedigital.com"
+              name = "email"
+              onChange={handleChangeEmailValue.bind(this)}
             />
             <i className="fa-solid fa-magnifying-glass search-icon"></i>
 
             <Form.Label>Role</Form.Label>
-            <Form.Select style={{ marginBottom: "10px" }}>
+            <Form.Select name = "roleId" style={{ marginBottom: "10px" }} onChange={handleChangeRoleIdValue.bind(this)}>
               <option>Please select role</option>
               <option value={1} key="jiraUser">
                 Jira User
@@ -125,12 +158,14 @@ export default function AddPeople() {
                 Jira Read Only
               </option>
             </Form.Select>
+            
             <Form.Label>End Date</Form.Label>
             <Form.Control
               type="date"
               min={currentDate}
               placeholder=""
-              name="enddate"
+              name="endDate"
+              onChange={handleChangeEndDateValue.bind(this)}
             />
 
             <Form.Label style={{ marginTop: "10px" }}>Working Hours</Form.Label>
@@ -138,7 +173,10 @@ export default function AddPeople() {
               style={{ marginBottom: "10px" }}
               className="search-input"
               placeholder="Please enter working hours"
+              name = "capacity"
+              onChange={handleChangeCapacityValue.bind(this)}
             />
+          
           </Form>
         </Modal.Body>
         <Modal.Footer>
