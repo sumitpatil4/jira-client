@@ -45,6 +45,7 @@ export default function StartSprint() {
         backdrop="static"
         keyboard={false}
         onClick={(e)=>{handleButtonClick(e);}}
+       
       >
         <Modal.Header>
           <Modal.Title>START SPRINT</Modal.Title>

@@ -11,7 +11,16 @@ export default function AddTeam() {
     setShow(false);
   };
   const handleShow = () => setShow(true);
+  const [teamName,setTeamName] = useState({
+    tname:"",
+    projectId:null
+  });
 
+  const handleChangeValue = (e) => {
+    setTeamName({ ...teamName, [e.target.name]: e.target.value });
+  };
+
+  console.log("Team Json "+JSON.stringify(teamName));
   return (
     <>
       <button
@@ -35,7 +44,7 @@ export default function AddTeam() {
         <Modal.Body>
           <Form className="user-assign">
           <Form.Label>Team Name</Form.Label><br></br>
-            <input style={{marginBottom:'10px'}} className="search-input" placeholder='' />
+            <input style={{marginBottom:'10px'}} name="tname" className="search-input" placeholder='' onChange={handleChangeValue.bind(this)} />
           </Form>
         
         </Modal.Body>
