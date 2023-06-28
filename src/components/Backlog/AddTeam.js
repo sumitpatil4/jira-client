@@ -13,7 +13,7 @@ export default function AddTeam(props) {
   };
   const handleShow = () => setShow(true);
   const [teamName,setTeamName] = useState({
-    tname:"",
+    name:"",
     projectId:props.projectId
   });
 
@@ -48,7 +48,7 @@ export default function AddTeam(props) {
         <Modal.Body>
           <Form className="user-assign">
           <Form.Label>Team Name</Form.Label><br></br>
-            <input style={{marginBottom:'10px'}} name="tname" className="search-input" placeholder='' onChange={handleChangeValue.bind(this)} />
+            <input style={{marginBottom:'10px'}} name="name" className="search-input" placeholder='' onChange={handleChangeValue.bind(this)} />
           </Form>
         
         </Modal.Body>

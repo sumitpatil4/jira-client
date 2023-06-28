@@ -70,7 +70,7 @@ export default function StartSprint() {
           </Form.Select>
           <br></br>
           <Form.Label>Start Date</Form.Label>
-          <Form.Control type="date" min={currentDate} value = {dateValue} placeholder="" name="startdate" />
+          <Form.Control type="date" min={currentDate} placeholder="" name="startdate" />
             <br></br>
           <Form.Label>Sprint Goal</Form.Label><br></br>
             <Form.Control
