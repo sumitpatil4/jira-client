@@ -12,6 +12,7 @@ import Setting from '../Setting/Setting';
 import Project from '../common/navbar/Project';
 import CreatIssue from '../common/navbar/createIssueButton/CreatIssue';
 import Board from '../Board/Board';
+import ViewAllProject from '../LandingPage/viewAllProjects/ViewAllProject';
 
 const Homepage = () => {
   const { isAuthenticated, useEffectReload } = useContext(AuthContext);
@@ -38,6 +39,7 @@ const Homepage = () => {
               <Route path="/roadmap" element={<Roadmap />} />
               <Route path="/setting" element={<Setting />} />
               <Route path="/project" element={<Project />} />
+              <Route path="/view-all" element={<ViewAllProject />} />
             </Routes>
           </div>
         </>
