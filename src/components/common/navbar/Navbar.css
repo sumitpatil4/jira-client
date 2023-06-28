@@ -54,7 +54,8 @@
 /* /////////////////////////// */
 .projectOuterWrapper {
 
-    background-color: white;
+    background-color:white;
+    color:#010307;
     min-width: 18rem;
     padding-top: 5vh;
     margin-left:5vh;
