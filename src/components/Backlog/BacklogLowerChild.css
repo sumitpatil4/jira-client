@@ -14,3 +14,7 @@
 .main-container-without-sidebar-open{
     transition: margin-left 0.3s ease-in-out;
 }
+
+.accordianheader{
+background-color: #e6effc;
+}

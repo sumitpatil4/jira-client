@@ -19,7 +19,7 @@ export default function BacklogLowerChild(props) {
         <div className='backlogAccordian'>
           <Accordion defaultActiveKey={['0']} alwaysOpen>
             <Accordion.Item eventKey="0">
-              <Accordion.Header>Backlog <button className="addDates" variant="primary" onClick={handleButtonClick}><i class="fa-solid fa-pencil"></i>Add Dates </button> </Accordion.Header>
+              <Accordion.Header className="accordianheader">Backlog <button className="addDates" variant="primary" onClick={handleButtonClick}><i class="fa-solid fa-pencil"></i>Add Dates </button> </Accordion.Header>
               <Accordion.Body>
                 <DragAndDropArea />
               </Accordion.Body>

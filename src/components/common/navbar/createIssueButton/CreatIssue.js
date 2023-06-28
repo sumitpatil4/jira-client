@@ -8,13 +8,15 @@ import Modal from 'react-bootstrap/Modal';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
-import TaskIcon from '@mui/icons-material/Task';
+// import TaskIcon from '@mui/icons-material/Task';
+import AddTaskIcon from '@mui/icons-material/AddTask';
 import AutoStoriesIcon from '@mui/icons-material/AutoStories';
 import BugReportIcon from '@mui/icons-material/BugReport';
 import TipsAndUpdatesSharpIcon from '@mui/icons-material/TipsAndUpdatesSharp';
 import { Box, InputAdornment, createTheme } from '@mui/material';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
+
 let projects = ["ProjectOne", "ProjectTwo"];
 let issueTypes = ["Story", "Task", "Bug", "Epic"];
 let Status = ["To Do", "IN PROGRESS", "DONE"];
@@ -73,7 +75,7 @@ export default function CreatIssue() {
         <>
             {/* on click create button this modal will be visible */}
 
-            <Button variant="primary" onClick={handleCreateIssueShow}> 
+            <Button  className="button-style" onClick={handleCreateIssueShow}> 
                 CREATE
             </Button>
 
@@ -122,7 +124,7 @@ export default function CreatIssue() {
                             renderOption={(props, option) => (
                                 <Box component='li' {...props}>
                                     {
-                                        (option === 'Task') ? (<TaskIcon color='info' fontSize='small' />)
+                                        (option === 'Task') ? (<AddTaskIcon color='info' fontSize='small' />)
                                             : (option === 'Story') ? (<AutoStoriesIcon color='success' fontSize='small' />)
                                                 : (option === 'Bug') ? (<BugReportIcon color='error' fontSize='small' />)
                                                     : (<TipsAndUpdatesSharpIcon color='warning' fontSize='small' />)
@@ -139,7 +141,7 @@ export default function CreatIssue() {
                                     ...params.InputProps, style: { fontSize: 13 }, startAdornment: (
                                         <InputAdornment position='start' >
                                             {
-                                                (issueTypeValue === 'Task') ? (<TaskIcon color='info' fontSize='small' />)
+                                                (issueTypeValue === 'Task') ? (<AddTaskIcon color='info' fontSize='small' />)
                                                     : (issueTypeValue === 'Story') ? (<AutoStoriesIcon color='success' fontSize='small' />)
                                                         : (issueTypeValue === 'Bug') ? (<BugReportIcon color='error' fontSize='small' />)
                                                             : (<TipsAndUpdatesSharpIcon color='warning' fontSize='small' />)
