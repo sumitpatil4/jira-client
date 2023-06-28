@@ -16,6 +16,7 @@ import TipsAndUpdatesSharpIcon from '@mui/icons-material/TipsAndUpdatesSharp';
 import { Box, InputAdornment, createTheme } from '@mui/material';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
+
 let projects = ["ProjectOne", "ProjectTwo"];
 let issueTypes = ["Story", "Task", "Bug", "Epic"];
 let Status = ["To Do", "IN PROGRESS", "DONE"];
@@ -74,7 +75,7 @@ export default function CreatIssue() {
         <>
             {/* on click create button this modal will be visible */}
 
-            <Button variant="primary" onClick={handleCreateIssueShow}> 
+            <Button  className="button-style" onClick={handleCreateIssueShow}> 
                 CREATE
             </Button>
 

@@ -1,7 +1,7 @@
 .features{
     display: flex;
     flex-direction: column;
-    background-color:hsl(240, 100%, 99%);
+    background-color:#f7f8fa;
     width:16vw;
     font-size:medium;
     font-weight: 600;
@@ -31,7 +31,7 @@
   border: none;
     cursor: pointer;
     width: 100%;
-    background-color: hsl(240, 100%, 99%);
+    background-color: #f7f8fa;
     height:8vh;
    text-align: left;
   padding-left: 12%;
@@ -41,13 +41,13 @@
 .sidebar-board-btn:hover, 
 .sidebar-roadmap-btn:hover, 
 .sidebar-setting-btn:hover, .sidebar-project-name:hover{
-   background-color: hsl(0, 0%, 94%);
-  
-  color:rgb(4, 35, 114);  
+   background-color:#e6effc;
+  color:#0052cc;  
+  font-size: large;
 }
 
 .sidebar-project-name{
-    background-color: hsl(240, 100%, 99%);
+    background-color: #f7f8fa;
     border: none;
 }
 
@@ -58,7 +58,7 @@
     height: 100vh;
     width: 16vw;
     transition: left 0.3s ease-in-out;
-    background-color: hsl(240, 100%, 99%);
+    background-color: #f7f8fa;
     align-items: start;
    
   }
