@@ -17,14 +17,14 @@ function Backlog() {
        ( sidebarOpen === "true") ?
       (<>
       <Sidebar isOpen={sidebarOpen} toggleSidebar={handleViewSidebar} />
-      <BacklogUpperChild projectName={"Accolite JIRA"} isOpen = {sidebarOpen}/>
+      <BacklogUpperChild projectName={"Accolite JIRA"} isOpen = {sidebarOpen} projectId = {"1"}/>
       <BacklogLowerChild isOpen = {sidebarOpen}/>
       </>
       ) : 
        (
         <>
       <Sidebar isOpen={sidebarOpen} toggleSidebar={handleViewSidebar} />
-      <BacklogUpperChild projectName={"Accolite JIRA"} isOpen = {sidebarOpen}/>
+      <BacklogUpperChild projectName={"Accolite JIRA"} isOpen = {sidebarOpen} projectId = {"1"}/>
       <BacklogLowerChild isOpen = {sidebarOpen}/>
       </>
        )
