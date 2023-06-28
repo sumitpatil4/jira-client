@@ -1,20 +1,36 @@
 .backlogAccordian {
-    height: 5px;
+    /* height: 5px; */
     width: 80%;;
+    margin-bottom: 3rem;
 }
 .startsprint{
     margin-left: 80%;
 }
 
+.sprintAccordian{
+    /* height: 5px; */
+    width: 80%;;
+    /* margin-bottom: 3rem; */
+}
+
 .main-container-with-sidebar-open{
-    margin-left : 17.5%;
+    margin-left : 18.5%;
     transition: margin-left 0.3s ease-in-out;
+    margin-bottom: 3rem;
 }
 
 .main-container-without-sidebar-open{
+    margin-left: 3%;
     transition: margin-left 0.3s ease-in-out;
+
 }
 
 .accordianheader{
 background-color: #e6effc;
+
+    margin-bottom: 3rem;
 }
+.accordion-header {
+    position: relative;
+  }
+

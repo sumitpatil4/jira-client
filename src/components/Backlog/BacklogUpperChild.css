@@ -23,13 +23,13 @@
 }
 
 .first-container{
-    margin: 1rem;
-    margin-left: 2rem;
+    margin: 0.8rem;
+    margin-left: 3rem;
     /* margin-bottom: 0.8rem; */
 }
 
 .second-container{
-    margin-left: 2rem;
+    margin-left: 3rem;
     margin-right: 0.8rem;
     margin-bottom: 0.8rem;
 }
@@ -49,6 +49,7 @@
 .user-icon{
     /* margin-left: 0.5; */
 }
+
 .user-icon-button{
     width: 2.5rem;
     height: 2.5rem;

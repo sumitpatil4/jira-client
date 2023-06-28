@@ -2,6 +2,7 @@ import React from 'react'
 import Modal from "react-bootstrap/Modal";
 import Form from "react-bootstrap/Form";
 import { useState } from 'react';
+import './StartSprint.css';
 export default function EditSprint() {
     const [show, setShow] = useState(false);
     const handleClose = () => {
@@ -28,9 +29,13 @@ export default function EditSprint() {
         }
         setCurrentDate(date);
       }
+      const handleButtonClick = (event) => {
+        event.stopPropagation();
+        // Add your button click logic here
+      };
   return (
       <>
-      <button className="button7" onClick={(e) => {handleShow();  todayDate(); }}> Update Sprint
+      <button className="edit-sprint-button" onClick={(e) => {handleShow();  todayDate(); handleButtonClick(e);}}> Update Sprint
       </button>
       <Modal
         show={show}
@@ -68,9 +73,9 @@ export default function EditSprint() {
 
         </Modal.Body>
         <Modal.Footer>
-           <button className='button3' form="update" onClick={() => { handleClose(); }}
+           <button className='button3' form="update" onClick={(e) => { handleClose(); handleButtonClick(e);}}
             >Update</button>
-            <button className='button3' onClick={handleClose}>Cancel</button> &nbsp;
+            <button className='button3' onClick={(e)=>{handleClose(); handleButtonClick(e);}}>Cancel</button> &nbsp;
         </Modal.Footer>
       </Modal>
     </>

@@ -34,7 +34,9 @@
 
 .viewProjects {
     margin-left: 80%;
+
     color: #cfe2ff;
+
 }
 
 .viewProjects:hover {
@@ -106,6 +108,15 @@
 
 .assignedProjectsTableContent {
     margin-right: 50rem;
+}
+
+.assignedProjectsTableRow:hover {
+    .ProjectNameContainer {
+        color: white
+    }
+    .ProjectNickNameContainer {
+        color: white
+    }
 }
 
 .TableContentSubContainer {

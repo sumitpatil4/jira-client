@@ -1,0 +1,14 @@
+
+.start-sprint-button{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(-180%, -50%);
+    
+}
+ .edit-sprint-button{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(-40%, -50%);
+ }
