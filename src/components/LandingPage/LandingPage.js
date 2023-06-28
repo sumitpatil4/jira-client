@@ -5,6 +5,7 @@ import "./LandingPage.css";
 import { NavLink } from "react-router-dom";
 import { MdOutlinePending } from 'react-icons/md';
 import toDoIcon from "../../Images/task.png"
+
 export default function LandingPage() {
   const assignedProjects = [
     {

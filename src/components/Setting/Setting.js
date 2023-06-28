@@ -1,9 +1,10 @@
 import React from 'react'
 // import Navbar from './common/Navbar'
+import { Button} from "@mui/material";
 import Sidebar from '../common/sidebar/Sidebar'
 import { useState } from 'react';
 import "./Setting.css"
-     
+import SettingHeader from './SettingHeader';   
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 export default function Backlog() {
@@ -16,8 +17,9 @@ export default function Backlog() {
     <div className="setting-component">
     {/* <Navbar onClick={handleViewSidebar} /> */}
     <Sidebar isOpen={sidebarOpen} toggleSidebar={handleViewSidebar} />
+    
     <div className="setting-area">
-     <h1 className='heading'>Hello I am Setting Page</h1>
+    <SettingHeader projectName={"Accolite JIRA"} isOpen = {sidebarOpen}/>
      <Box
       component="form"
       sx={{
@@ -26,13 +28,28 @@ export default function Backlog() {
       noValidate
       autoComplete="off"
     >
-      <div>
-        <TextField
+      <div className="form-style">
+        <div><TextField
           required
           id="outlined-required"
           label="Project Name"
-          defaultValue="Hello World"
-        />
+          defaultValue="Jira"
+        /></div>
+        <div><TextField
+          required
+          id="outlined-required"
+          label="Key"
+          defaultValue="JIRA"
+        /></div>
+        <div><TextField
+          required
+          id="outlined-required"
+          label="Assignee"
+          defaultValue="Unassinged"
+        /></div>
+        <Button variant="contained" type="submit" style={{height:'35px'}}>
+              Save
+        </Button>
         </div>
       </Box>
 

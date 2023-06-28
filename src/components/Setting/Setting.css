@@ -2,15 +2,24 @@
     display: flex;
     flex-direction: column;
     margin-top: 3.8rem;
+    
 }
 
 .setting-area{
     background:linear-gradient(rgba(151, 168, 216, 0.8),transparent);
     height: 100vh;
     margin-left: 16%;
-    margin-top: 0.5%;
+    margin-top: 0.4%;
 }
 
 .heading{
     margin-left: 2rem;
+}
+
+.form-style{
+   
+    display:flex;
+    align-items:center;
+    flex-direction: column;
+    margin-top:3rem;
 }

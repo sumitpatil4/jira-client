@@ -6,6 +6,7 @@ import { Button,Stack } from "@mui/material";
 import './Navbar.css'
 import { useContext } from "react";
 import AuthContext from "../../ContextApi/AuthContext";
+import {Link} from 'react-router-dom'
 export default function CreateProject() {
   const [show, setShow] = useState(false);
   const[title,setTitle]=useState("");
@@ -26,11 +27,11 @@ export default function CreateProject() {
   }
   return (
     <>
-    <Button variant="contained" type="submit" style={{height:'35px'}} onClick={(e) => {
+    <Link className='btn' style={{height:'55px'}} onClick={(e) => {
           handleShow();
         }}>
                Create
-              </Button>
+    </Link>
       
 
       <Modal

@@ -1,5 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import CreateProject from './CreateProject'
 export default function Project() {
     let ListOfProjects=["Project1","Project2","Project3"]
   return (
@@ -16,9 +17,7 @@ export default function Project() {
         <div>
             <button className='btn'>View all Projects</button>
             <hr/>
-            <Link to='/create-project'>
-            <button className='btn' >Create Project</button>
-            </Link>
+            <CreateProject/>
         </div>
     </div>
   )
