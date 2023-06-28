@@ -22,8 +22,15 @@
 .main-container-without-sidebar-open{
     margin-left: 3%;
     transition: margin-left 0.3s ease-in-out;
+
+}
+
+.accordianheader{
+background-color: #e6effc;
+
     margin-bottom: 3rem;
 }
 .accordion-header {
     position: relative;
   }
+

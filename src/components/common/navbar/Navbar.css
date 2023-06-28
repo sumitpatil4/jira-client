@@ -1,6 +1,7 @@
 .outerWrapper {
     height: 10vh;
-    background: aliceblue;
+    background: #013a63;
+    color: #fff;
     display: flex;
     gap: 15rem;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
@@ -9,28 +10,44 @@
     top: 0;
     z-index: 999; /* Adjust the value as needed to make sure it's above the sidebar */
   }
-.navbar-title{
+.container {
+    /* max-width: 1700px;
+    margin: 0 auto;
+    padding: 0 15px; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    margin-left: 1vw;
+  }
+/* .navbar-title{
+    
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin: 2%;
+    margin: -2%;
     width: 100%;
     
-}
+} */
+
+  
 .navbar-logo{
-    font-size: 20px;
+    font-size: 35px;
     font-weight: bold;
-    
-    color: rgb(10, 53, 122);
+    font-family: Arial;
+    width:30vw;
+    color:#fff;
+    margin-top: 1vh;
     
 }
 
 .nav-links {
+    margin-top: 1vh;
     display: flex;
-    margin-right: 2rem;
+    margin-right: -3vw;
     gap: 1rem;
-    margin-left: 20vh;
+    margin-left:5vw;
     
 }
 
@@ -40,7 +57,6 @@
     background-color: white;
     min-width: 18rem;
     padding-top: 2vh;
-  
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     border-radius: 6px;
 }
@@ -59,18 +75,19 @@
 }
 .button-style{
         position:fixed;
-        margin-left:85vh;
+        margin-left:1vh;
+        margin-right: 3vw;
         padding: 1vh 2vh;
         border-radius: 4px;
         outline: none;
-        border: none;
         font-size: 14px;
         color: #fff;
+        border-color: #fff;
         cursor: pointer;
-        background-color: blue;
+        background-color: #05172d;
         height:6vh;
         width:14vh;
-        margin-top: 1.7vh;
+        margin-top: -0.5vh;
       
 }
 .button-style:hover{
@@ -92,6 +109,7 @@
     /* z-index: 1; */
 
 }
+
 
 .btn-div {
     height: 20vh;
@@ -125,27 +143,32 @@
 }
 
 .profileUserName{
-    background-color: white;
+    border-radius:0%;
+    background-color: #013a63;
     border: none;
     height:fit-content;
     
   }
   .btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active {
     /* color: var(--bs-btn-active-color); */
-    background-color: white ;
+    background-color: #05172d;
 }
 
   .profile {
-    background-color: rgb(253, 253, 253);
+    /* margin-top: 1vh; */
+    background-color:#013a63;
     opacity:1;
     width: 0%;
     height: 8vh;
     display: flex;
-    margin-left:33%;
-    padding-top: 1vh;
+    margin-left:15vh;
+    /* padding-top: 1vh; */
+  }
+  .margin-setup{
+    margin-top: 2vh;
   }
   .profileUserName :hover {
-   background-color: white;
+   background-color: #013a63;
   }
   
 .googleImage{
@@ -161,6 +184,7 @@
    border-style:none;
    color: blue ;
    font-weight: bold;
+   
 }
 .yourWork-btn .btn-1:hover{
     border-style:none;

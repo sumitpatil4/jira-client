@@ -34,7 +34,9 @@
 
 .viewProjects {
     margin-left: 80%;
-    color: #0052CC;
+
+    color: #cfe2ff;
+
 }
 
 .viewProjects:hover {
@@ -195,7 +197,7 @@
 .add-project{
     width: 11rem;
     height: 11rem;
-    border: 2px solid rgb(4, 4, 104);
+    border: 2px solid #9a9b9c;;
 }
 .add-project-nav{
     padding: 1rem;
@@ -213,7 +215,7 @@
 }
 
 .Card-container{
-  border-left: 20px solid #70aeb8; 
+  border-left: 20px solid #01497c; 
   width: 13rem;
   height: 11rem;
 }

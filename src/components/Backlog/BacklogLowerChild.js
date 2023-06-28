@@ -22,10 +22,12 @@ export default function BacklogLowerChild(props) {
 
   return (
 
+
     <>
       <div><SprintSection isOpen={props.isOpen} /></div>
       <div><BacklogSection isOpen={props.isOpen} /></div>
     </>
+
 
   )
 }

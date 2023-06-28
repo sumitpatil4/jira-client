@@ -4,7 +4,7 @@
     justify-content: center;
     flex-direction: column;
     margin-bottom: 5rem;
-    background:linear-gradient(rgba(151, 168, 216, 0.8),transparent);
+    /* background:linear-gradient(rgba(151, 168, 216, 0.8),transparent); */
     margin-left: 15%;
     transition: margin-left 0.3s ease-in-out;
     margin-top: 3.8rem;
@@ -16,7 +16,7 @@
     justify-content: center;
     flex-direction: column;
     margin-bottom: 5rem;
-    background:linear-gradient(rgba(151, 168, 216, 0.8),transparent);
+    /* background:linear-gradient(rgba(151, 168, 216, 0.8),transparent); */
     /* border: 2px solid black; */
     transition: margin-left 0.3s ease-in-out;
     margin-top: 3.8rem;
@@ -46,7 +46,9 @@
     margin-left: -1.3rem;
   }
 
-
+.user-icon{
+    /* margin-left: 0.5; */
+}
 
 .user-icon-button{
     width: 2.5rem;
