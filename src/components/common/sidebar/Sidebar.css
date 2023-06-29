@@ -1,7 +1,7 @@
 .features{
     display: flex;
     flex-direction: column;
-    background-color:hsl(240, 100%, 99%);
+    background-color:#f7f8fa;
     width:16vw;
     font-size:medium;
     font-weight: 600;
@@ -9,7 +9,17 @@
     border: none; 
     box-shadow: 0.1px 0.1px 0.6px 0.6px rgb(197, 197, 229);  
 }
-
+.features-icon{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 10px;
+  height: 15%;
+  border-bottom: 1px solid rgb(78, 78, 78);
+}
+.icon-logo{
+  
+}
 .sidebarClass{
     padding-top: 10.1rem !important;    
 }
@@ -20,8 +30,8 @@
 .sidebar-setting-btn{
   border: none;
     cursor: pointer;
-    width: 15vw;
-    background-color: hsl(240, 100%, 99%);
+    width: 100%;
+    background-color: #f7f8fa;
     height:8vh;
    text-align: left;
   padding-left: 12%;
@@ -31,39 +41,45 @@
 .sidebar-board-btn:hover, 
 .sidebar-roadmap-btn:hover, 
 .sidebar-setting-btn:hover, .sidebar-project-name:hover{
-   background-color: hsl(240, 46%, 86%);
+   background-color:#e6effc;
+  color:#0052cc;  
   font-size: large;
-  color:blue;  
 }
 
 .sidebar-project-name{
-    background-color: hsl(240, 100%, 99%);
-    height: 5rem;
+    background-color: #f7f8fa;
     border: none;
 }
 
 .sidebar {
-    position: absolute;
-    left: -15vw;
+    position: fixed;
+    margin-top:0.05%;
+    left: -16vw;
     height: 100vh;
     width: 16vw;
     transition: left 0.3s ease-in-out;
-    background-color: hsl(240, 100%, 99%);
+    background-color: #f7f8fa;
     align-items: start;
    
   }
 
   .sidebar-toggle {
-    background-color: hsl(240, 100%, 99%);
+    background-color: hsl(220, 100%, 91%);
     position: absolute; 
     border-radius: 80% 80% 80% 80%;
     border: none;
-    margin-left: 93%;
-    margin-top: 10%;
-    height: 30px;
-    width: 30px;
+    margin-left: 95%;
+    margin-top: 20%;
+    height: 20px;
+    width: 20px;
+    opacity: .3;
   }
 
+.sidebar-toggle i{
+  margin-top: -10px;
+
+  
+}
   .sidebar-toggle:hover{
     opacity: 1;
   }
