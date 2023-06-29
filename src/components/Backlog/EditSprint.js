@@ -98,7 +98,6 @@ export default function EditSprint() {
             <Form.Control
               type="date"
               min={currentDate}
-              value={dateValue}
               placeholder=""
               name="startdate"
             />
