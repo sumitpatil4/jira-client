@@ -15,7 +15,6 @@ export default function Backlog() {
 
   return (
     <div className="setting-component">
-    {/* <Navbar onClick={handleViewSidebar} /> */}
     <Sidebar isOpen={sidebarOpen} toggleSidebar={handleViewSidebar} />
     
     <div className="setting-area">
