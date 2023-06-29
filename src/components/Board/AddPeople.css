@@ -1,0 +1,50 @@
+/* AddPeople container */
+.form-name>h3{
+    padding-top: 15px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+  }
+  .add-people{
+    background-color:  #f0f0f0;
+    width: 400px;
+    margin: 30px auto;
+    border-radius: 6px;
+    /* height: fit-content; */
+    height: 300px;
+    margin-top: 2rem;
+  }
+  
+  /* Form labels */
+  .add-people label {
+    display: block;
+    margin-bottom: 10px;
+    margin-left: 20px;
+  }
+  
+  /* Form input fields */
+  .add-people input[type=text],
+  .add-people select {
+    /* width: 90%; */
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    box-sizing: border-box;
+    border-radius: 5px;
+  }
+  
+  /* Form button */
+  .add-people button{
+      margin: 10px;
+      /* margin-left: 100px; */
+      background-color: #6994ea;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      border-radius: 6px;
+  }
+  
+  /* Form Add button on hover */
+  .add-people button:hover {
+      background-color: #2e21de;
+    }

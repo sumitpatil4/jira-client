@@ -1,0 +1,40 @@
+.completesprint{
+    background-color: rgb(228, 232, 239);
+    width: 650px;
+    margin: 30px auto;
+    /* font-family: Arial, sans-serif; */
+    height: 320px;
+    /* height: fit-content; */
+    margin-top: 2rem;
+    border-radius: 5px;
+}
+.sprint-para {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 53px;
+  }
+  .sprint-p{
+    margin-left: 53px;
+  }
+  .sprint-list{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 70px;
+  }
+  .sprint-dropdown>select{
+    margin-top: 15px;
+    margin-left: 53px;
+    height: 40px;
+    width: 500px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .complete-button{
+    color: white;
+    background-color: rgb(20, 20, 206);
+  }
+  .completebut :hover{
+    /* background-color: rgb(20, 20, 206); */
+    background-color: blue;
+  }
+
