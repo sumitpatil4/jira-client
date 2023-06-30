@@ -20,7 +20,6 @@ const ViewAllProject = () => {
       
         <div className='ViewAllProjectMainHeading'>
                 <h3>Projects</h3>
-                <button className='btn createProjectButton'>Create Project</button>
             </div>
             <br></br>
             <br></br>

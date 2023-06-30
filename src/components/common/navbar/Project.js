@@ -19,8 +19,6 @@ export default function Project() {
             <Link className='btn' to='/view-all'>View all Projects
             </Link>
             <hr/>
-
-            <CreateProject/>
         </div>
     </div>
   )
