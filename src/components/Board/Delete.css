@@ -1,0 +1,93 @@
+/* .todoform{
+    background-color: rgb(190, 190, 70);
+    width: 500px;
+    margin: 30px auto;
+    border-radius: 6px;
+    height: fit-content;
+    height: 300px;
+    margin-top: 2rem;
+}
+.para{
+    margin-top: 25px;
+    margin-bottom: 20px;
+} */
+.tododelete{
+    background-color: rgb(228, 232, 239);
+    width: 650px;
+    margin: 30px auto;
+    height: 320px;
+    margin-top: 2rem;
+    border-radius: 5px;
+}
+.head{
+    display: flex;
+    justify-content: first baseline;
+    margin-top: 20px;
+}
+.exclamation{
+    margin-top: 2px;
+    /* background-color: red; */
+    color: red;
+    font-size: 18px;
+}
+.p1{
+    margin-top: 20px;
+}
+  .para {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 53px;
+  }
+  .para h3{
+    font-family: Arial, sans-serif;
+    margin-bottom: 10px;
+    margin-left: 25px;
+    margin-right: 20px;
+  }
+  .todo-status {
+    display: flex;
+    margin-left: 25px;
+    justify-content: space-around;
+  }
+  .todo-stat h5{
+    margin-top: 20px;
+  }
+  .todo-h5 del{
+    background-color:  rgb(189, 189, 197);;
+    border-radius: 3px;
+  }
+
+  #dropdown {
+    margin-top:20px ;
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .button {
+    display: flex;
+    margin-top: 20px;
+    justify-content: end;
+  }
+  button {
+    padding: 8px 12px;
+    margin-left: -45px;
+    margin-right: 65px;
+    font-size: 15px;
+    /* color: #fff; */
+    /* background-color: #007bff; */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .deletebut :hover{
+    background-color:red ;
+  }
+  .delete-button {
+    background-color: #dc3545;
+  }
+  .cancelbut :hover{
+    background-color: rgb(184, 181, 181);
+  }
+  

@@ -1,0 +1,252 @@
+.grid1{
+    box-shadow: 4px 0 6px -6px black;
+    overflow: auto;
+    height: 400px;
+  }
+  .add-issue{
+    background-color:  #F0F0F0;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    box-shadow: 0 -4px 6px -6px black;
+    width: 1000px;
+    margin: 30px auto;
+    border-radius: 6px;
+    height: fit-content;
+    /* height: 400px; */
+    margin-top: 2rem;
+  }
+  .issue-name-dropdown{
+    display: flex;
+    /* justify-content: space-between; */
+    /* justify-content: space-around; */
+    padding-top: 15px;
+    margin-bottom: 10px;
+    margin-left: 28px;
+  }
+  .issueform-dropdown{
+    /* margin-left: 400px; */
+    /* background-color: blue; */
+    margin-top: 55px;
+    margin-bottom: 20px;
+  }
+  .issueform-dropdown>select{
+    color: white;
+    background-color: blue;
+    height: 40px;
+    width: 150px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  .issueform-dropdown>select>option{
+    color: black;
+    background-color: white;
+    border-radius: 3px;
+  }
+  .add-issue label {
+    display: block;
+    margin-bottom: 10px;
+    margin-left: 28px;
+  }
+  .add-issue textarea{
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-left: 28px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    width: 300px;
+  }
+  .comment input{
+    padding: 10px;
+    margin-bottom: 15px;
+    margin-left: 28px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    width: 300px;
+  }
+.details{
+  margin-left: 10px;
+}
+/* Form Add button on hover */
+.sprint,
+.storypoint,
+.reporter,
+.assignee{
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.assignee>select{
+  height: 40px;
+  width: 250px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 89px;
+}
+.sprint>select{
+  height: 40px;
+  width: 250px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 112px;
+}
+.storypoint input{
+  padding: 10px;
+  margin-bottom: 15px;
+  /* margin-left: 28px; */
+  box-sizing: border-box;
+  border-radius: 5px;
+  width: 250px;
+  margin-left: 10px;
+}
+.reporter>select{
+  height: 40px;
+  width: 250px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 90px;
+}
+.reporter input{
+  padding: 10px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  width: 250px;
+  margin-left: 90px;
+}
+.attachment{
+  display: flex;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.attachment>form{
+  display: flex;
+  background-color:  #F0F0F0;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid;
+  height: 25px;
+  width: 90px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-left: 30px;
+}
+.attachment :hover{
+  background-color: white;
+}
+.attach-icon{
+  margin-top: -27px;
+  margin-right: 45px ;
+}
+.link-issue,
+.child-issue{
+  display: flex;
+  background-color:  #F0F0F0;
+  height: 25px;
+  width: 150px;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  border: 2px solid;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.child-issue :hover{
+  background-color: white;
+}
+.link-issue p,
+.child-issue p{
+  margin-left: 8px;
+}
+.childissue-input input{
+  padding: 10px;
+  margin-bottom: 15px;
+  margin-left: 28px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  width: 300px;
+}
+.childcreate-button{
+  margin: 10px;
+  margin-left: 28px;
+  background-color: #6994EA;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  margin-top: 1px;
+  margin-bottom: 30px;
+}.childcreate-button:hover{
+  background-color: blue;
+}
+.childcancel-button{
+  margin: 10px;
+  margin-left: 28px;
+  background-color: rgb(202, 197, 197);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  margin-top: 1px;
+  margin-bottom: 30px;
+}
+.childcancel-button:hover{
+  background-color: gray
+}
+.linkissue-dropdown>select{
+  height: 40px;
+  width: 300px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 29px;
+}
+.linkissue-input input{
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  margin-left: 28px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  width: 300px;
+  height: 40px;
+}
+.linkcreate-button{
+  margin: 10px;
+  margin-left: 28px;
+  background-color: #6994EA;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  margin-top: 1px;
+  margin-bottom: 30px;
+}.linkcreate-button:hover{
+  background-color: blue;
+}
+.linkcancel-button{
+  margin: 10px;
+  margin-left: 28px;
+  background-color: rgb(202, 197, 197);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  margin-top: 1px;
+  margin-bottom: 30px;
+}
+.linkcancel-button:hover{
+  background-color: gray
+}
+.cancel-button{
+  margin-left: 500px;
+}
+.X-button:hover{
+  background-color: black;
+  color: white;
+}
+
+
