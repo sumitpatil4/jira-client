@@ -21,8 +21,8 @@ const AddPeople = () => {
                         <option value="users">Users</option>
                     </select>
                 <div className="button">
-                    <button>Add</button>
                     <button>Cancel</button>
+                    <button>Add</button>
                 </div>
             </form>
         </div>

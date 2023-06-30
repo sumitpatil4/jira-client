@@ -9,9 +9,13 @@ import CompleteSprint from './CompleteSprint';
 import Delete from './Delete'
 import { Draggable, Droppable, DragDropContext } from 'react-beautiful-dnd';
 import IssueForm from './IssueForm';
+import { AiOutlinePlus } from 'react-icons/ai';
 import Sidebar from '../common/sidebar/Sidebar';
-//data
-const DATA = [
+
+const Board = () => {
+  
+  //data
+const [DATA, setArr] = useState([
   {
     id: "0e2f0db1-5457-46b0-949e-8032d2f9997a",
     issueType: "Todo",
@@ -39,9 +43,9 @@ const DATA = [
       { id: "d3edf796-6449-4931-a777-ff66965a025b", issue: "Debug and Test" },
     ]
   },
-];
+]);
 
-const Board = () => {
+
 //board section
   const[details,setDetails]=useState(DATA);
 // handleDragEnd
@@ -89,6 +93,20 @@ const handleDragEnd=(results)=>{
  setDetails(newDetails)
   }
  
+  //adding custom component
+  const handleClick = () =>{
+    const newArr = {
+      id : DATA.length+1,
+      issueType: "New One",
+      items:[ 
+              { id: "960cbbcf-89a0-4d79-aa8e-56abbc15eacc", issue: "Complete the sprint" },
+              { id: "d3edf796-6449-4931-a777-ff66965a025b", issue: "Debug and Test" },],
+    }
+    const x = DATA;
+    x.push(newArr);
+    setArr(x);
+    console.log(DATA)
+  }
 // handling pop up 
  const [isPopupVisible, setPopupVisible] = useState(false);
  const handleProfile=()=>{
@@ -188,9 +206,9 @@ return (
 
 {/* draganddrop */}
 <div className='dd'>
-        <div className="header">
+        {/* <div className="header">
             <h1>Jira Board</h1>
-          </div>
+          </div> */}
       <DragDropContext onDragEnd={handleDragEnd}>
           <Droppable droppableId="ROOT" type="group">
             {(provided) => (
@@ -212,7 +230,7 @@ return (
       {(provided) => (
         <div {...provided.droppableProps} ref={provided.innerRef}>
           <div className="issuetype">
-            <h3>{detail.issueType}</h3>
+            <p>{detail.issueType}</p>
             <BsThreeDots className='three-dots' onClick={()=>{handleDots(detail.issueType)}} />
             {isPopupDots && (
           <div className="popup-sprint">
@@ -230,7 +248,7 @@ return (
                     {...provided.draggableProps}
                     ref={provided.innerRef}
                   >
-                    <h4 onClick={()=>{handleIssue(detail.issueType)}}>{item.issue}</h4>
+                    <p onClick={()=>{handleIssue(detail.issueType)}}>{item.issue}</p>
                     {issueCheck&&
                     <div className="popup-sprint">
                     <div className="">
@@ -255,6 +273,7 @@ return (
             )}
           </Droppable>
         </DragDropContext>
+        <AiOutlinePlus onClick={()=>handleClick()} className='plus-icon'/>
     </div>
 
     </div>
