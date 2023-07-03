@@ -72,11 +72,11 @@ const IssueForm = (props) => {
                     {attachImg ? <img src={attachImg} alt={fileName}/> : <GrAttachment className="attach-icon" />}
                 </form>
                 <div className="child-issue">
-                    <ImTree className="tree-icon" />
+                    <ImTree onClick={handleChildIssue} className="tree-icon" />
                      <p onClick={handleChildIssue}>Add child issue</p>
                 </div>
                 <div className="link-issue">
-                    <FiLink className="link-icon" />
+                    <FiLink onClick={handleLinkIssue} className="link-icon" />
                      <p onClick={handleLinkIssue}>Link issue</p>
                 </div>
             </div>
