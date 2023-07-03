@@ -5,7 +5,12 @@ import "./LandingPage.css";
 import { NavLink } from "react-router-dom";
 import { MdOutlinePending } from 'react-icons/md';
 import toDoIcon from "../../Images/task.png"
+import AuthContext from '../ContextApi/AuthContext';
+import { useContext } from "react";
+
 export default function LandingPage() {
+  const {jiraRole} = useContext(AuthContext);
+  console.log("user jira role is: " ,jiraRole);
   const assignedProjects = [
     {
       projectName: "Project1",
@@ -78,7 +83,7 @@ export default function LandingPage() {
   return (
     <div className="LandingPage">
       <div className="LandingMainHeading">
-        <h4>Your Work</h4>
+        <h4>Your Works</h4>
       </div>
       <div className="RecentProjectSection">
         <div className="LandingSubHeading">
@@ -92,9 +97,6 @@ export default function LandingPage() {
           <div className="all-recent-project">
             <div>{getCard(0)}</div>
             <div>{getCard(0)}</div>
-            <div>{getCard(0)}</div>
-            <div>{getCard(0)}</div>
-            <div>{getCard(0)}</div>{" "}
           </div>
         </div>
       </div>
@@ -103,44 +105,54 @@ export default function LandingPage() {
           {/* total project assigned to the user */}
           <h6>Assigned to me {getAssignedchip(0)}</h6>
         </div>
-        <div className="ToDoSection">
-          <p className="ToDoHeading"> TO DO </p>
-          <table className="assignedProjectsTable">
-            <tbody>
-              {assignedProjects.map((index) => {
-                return (
-                  <tr className="assignedProjectsTableRow" key={index.id}>
-                    <td className="firstTd">
-                      {/* <MdOutlinePending/> */}
-                      <img src={toDoIcon} alt="todo-icon" />
-                    </td>
-                    <td className="centerTd">
-                      <div className="assignedProjectsTableContent">
-                        <div className="ProjectIssueDescContainer">
-                          <span>{index.issueDescription}</span>
-                        </div>
-                        <div className="TableContentSubContainer">
-                          <div className="ProjectNickNameContainer">
-                            {index.projectNickName}
-                            &nbsp;<span>&#183;</span>&nbsp;
-                          </div>
-                          <div className="ProjectNameContainer">
-                            {index.projectName}
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                    <td className="lastTd">
-                      <span className="ToDoWordColumn">To Do</span>
-                    </td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
-
+        
+        <div className="RecentProjectsCards">
+          <div className="all-recent-project">
+            <div>{getCard(0)}</div>
+            <div>{getCard(0)}</div>
+          </div>
         </div>
       </div>
+      
     </div>
   );
 }
+
+
+// <div className="ToDoSection">
+//           <p className="ToDoHeading"> TO DO </p>
+//           <table className="assignedProjectsTable">
+//             <tbody>
+//               {assignedProjects.map((index) => {
+//                 return (
+//                   <tr className="assignedProjectsTableRow" key={index.id}>
+//                     <td className="firstTd">
+//                       {/* <MdOutlinePending/> */}
+//                       <img src={toDoIcon} alt="todo-icon" />
+//                     </td>
+//                     <td className="centerTd">
+//                       <div className="assignedProjectsTableContent">
+//                         <div className="ProjectIssueDescContainer">
+//                           <span>{index.issueDescription}</span>
+//                         </div>
+//                         <div className="TableContentSubContainer">
+//                           <div className="ProjectNickNameContainer">
+//                             {index.projectNickName}
+//                             &nbsp;<span>&#183;</span>&nbsp;
+//                           </div>
+//                           <div className="ProjectNameContainer">
+//                             {index.projectName}
+//                           </div>
+//                         </div>
+//                       </div>
+//                     </td>
+//                     <td className="lastTd">
+//                       <span className="ToDoWordColumn">To Do</span>
+//                     </td>
+//                   </tr>
+//                 );
+//               })}
+//             </tbody>
+//           </table>
+
+//         </div>

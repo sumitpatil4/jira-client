@@ -4,6 +4,7 @@ import AuthContext from "../ContextApi/AuthContext";
 
 const GoogleLogin = ({ onLoginSuccess }) => {
     const { updateIsAuthenticated } = useContext(AuthContext);
+    const { updateJiraRole } = useContext(AuthContext);
 
     useEffect(() => {
         /* global google */
@@ -29,6 +30,7 @@ const GoogleLogin = ({ onLoginSuccess }) => {
             token: response.credential ,
         }).then((res) => {
             updateIsAuthenticated(true);
+            updateJiraRole(res.data.jiraRole.role);
             console.log(res.data);
             
         })

@@ -14,7 +14,7 @@ export const AuthContextProvider = (props) => {
     const [accessToken,setAccessToken]=useState("");
     const [idToken,setIdToken]=useState("");
     const [useEffectReload,setUseEffectReload]=useState(false);
-
+    const [jiraRole,setJiraRole] = useState("");
 
 
     const updateuserid=(e)=>setUserid(e);
@@ -26,7 +26,7 @@ export const AuthContextProvider = (props) => {
     const updateaccessToken=(e)=>setAccessToken(e);
     const updateidToken=(e)=>setIdToken(e);
     const updateIsAuthenticated =(e)=>{setIsAuthenticated(e);setUseEffectReload(!useEffectReload)};
-    
+    const updateJiraRole =(e)=>setJiraRole(e);
 
 
 const handleLogout=()=>{
@@ -39,6 +39,7 @@ const handleLogout=()=>{
     setUserrole("");
     setIdToken("");
     setAccessToken("");
+    setJiraRole("")
 }
 
 return (
@@ -54,6 +55,7 @@ return (
       accessToken,
       idToken,
       useEffectReload,
+      jiraRole,
 
       updateIsAuthenticated,
       handleLogout,
@@ -65,6 +67,7 @@ return (
       updateuserrole,
       updateaccessToken,
       updateidToken,
+      updateJiraRole,
     }}
   >
     {props.children}

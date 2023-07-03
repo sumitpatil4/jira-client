@@ -15,7 +15,8 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
   const [resPopUp,setResPopUp] = useState(false);
-  const { updateIsAuthenticated, } = useContext(AuthContext);
+  const { updateIsAuthenticated} = useContext(AuthContext);
+  const { updateJiraRole } = useContext(AuthContext);
   const navigate = useNavigate();
 
 
@@ -29,7 +30,7 @@ const Login = () => {
       .then((res) => {
         console.log(res);
         updateIsAuthenticated(true);
-        
+        updateJiraRole(res.data.jiraRole.role);
         if(res.data===""){
             setMessage("Invalid Credential!!!!");
             setResPopUp(true);
