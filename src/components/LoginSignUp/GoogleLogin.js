@@ -23,19 +23,15 @@ const GoogleLogin = ({ onLoginSuccess }) => {
     }, [])
 
     const handleLoginApi = (response) => {
-        console.log(response)
-
+        console.log(response.credential)
         axios.post(`http://localhost:4545/auth/login/userByGoogle`, {
-            
             token: response.credential ,
         }).then((res) => {
             updateIsAuthenticated(true);
-            updateJiraRole(res.data.jiraRole.role);
+            updateJiraRole(res.data.jiraRole?.role); // use ? to remove eslint errors
             console.log(res.data);
-            
         })
     };
-
     return (
         <div>
             <div id="LoginButton"   />

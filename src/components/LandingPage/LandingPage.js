@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Card from "react-bootstrap/Card";
 import add from "../../Images/add.png";
 import "./LandingPage.css";
@@ -10,6 +10,9 @@ import { useContext } from "react";
 
 export default function LandingPage() {
   const {jiraRole} = useContext(AuthContext);
+  // run an api to get the role of the user
+  const [userRole, setUserRole] = useState("USER");
+
   console.log("user jira role is: " ,jiraRole);
   const assignedProjects = [
     {
@@ -93,7 +96,12 @@ export default function LandingPage() {
         </div>
         {/* user Cards run a loop */}
         <div className="RecentProjectsCards">
-          <div>{createCard(0)}</div>
+          {
+            userRole === "ADMIN" ? 
+            <div>{createCard()}</div>
+            : null
+          }
+          
           <div className="all-recent-project">
             <div>{getCard(0)}</div>
             <div>{getCard(0)}</div>
