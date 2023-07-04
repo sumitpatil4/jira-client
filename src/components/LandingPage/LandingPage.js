@@ -142,7 +142,7 @@ export default function LandingPage() {
                   onChange={(e) => setDescription(e.target.value)}
                 />
 
-                <div>
+                <div className="date-flex">
 
                   <label >
                     Start Date

@@ -340,7 +340,14 @@
 
         .date-flex{
           padding-top: 15px;
-          display: flex;
+          /* display: flex; */
+    
+        }
+        .date-flex input{
+          height: 35px;
+          margin-left: 20px;
+          width: 350px;
+          border-radius:3px ;
         }
         .datepicker-input {
           width: 100px;
