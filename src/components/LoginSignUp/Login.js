@@ -15,7 +15,7 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
   const [resPopUp,setResPopUp] = useState(false);
-  const { updateIsAuthenticated, } = useContext(AuthContext);
+  const { updateIsAuthenticated,updateusermail,updateuserid } = useContext(AuthContext);
   const navigate = useNavigate();
 
 
@@ -29,6 +29,9 @@ const Login = () => {
       .then((res) => {
         console.log(res);
         updateIsAuthenticated(true);
+        updateusermail(res.data.email);
+        updateuserid(res.data.id);
+
         
         if(res.data===""){
             setMessage("Invalid Credential!!!!");
@@ -99,7 +102,7 @@ const Login = () => {
       {resPopUp && <div className='popupContainer'>
           <div className='popup-boxd'>
             <div className='popupHeader'>
-              <h2>Opps Something went wrong!!</h2>
+              <h2>Oops Something went wrong!!</h2>
             </div>
               <div className='msgContainer'>
                 <p>{message}</p>

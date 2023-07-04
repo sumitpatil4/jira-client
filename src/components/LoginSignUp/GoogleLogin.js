@@ -16,7 +16,7 @@ const GoogleLogin = ({ onLoginSuccess }) => {
                 document.getElementById("LoginButton"),
                 {
                     theme: "dark", 
-        size: "larger"
+                    size: "larger"
                 })
         }, 500)
     }, [])

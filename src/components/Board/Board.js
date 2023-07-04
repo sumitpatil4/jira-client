@@ -159,8 +159,10 @@ const [sidebarOpen, setSideBarOpen] = useState(true);
    setSideBarOpen(!sidebarOpen);
  }
 return (
-  <div className="board-component">
-  {/* <Navbar onClick={handleViewSidebar} /> */}
+  
+    <div className={(sidebarOpen ? 'main-container-with-sidebar-open' : 'main-container-without-sidebar-open')}>
+    <div className="board-component">
+    {/* <Navbar onClick={handleViewSidebar} /> */}
   <Sidebar isOpen={sidebarOpen} toggleSidebar={handleViewSidebar} />
   <div className="board-area">
    {/* <h1 className='heading'>Hello I am Board Page</h1> */}
@@ -278,7 +280,7 @@ return (
 
     </div>
  </div>
- 
+ </div>
 </div>
 
   );

@@ -2,10 +2,25 @@ import React from "react";
 import Card from "react-bootstrap/Card";
 import add from "../../Images/add.png";
 import "./LandingPage.css";
+import { Label, Input } from "reactstrap";
 import { NavLink } from "react-router-dom";
 import { MdOutlinePending } from 'react-icons/md';
 import toDoIcon from "../../Images/task.png"
+import { Button } from "bootstrap";
+import { useState } from "react";
+import "react-datepicker/dist/react-datepicker.css";
+import {postNewProject} from "../Services/ProjectService"
 export default function LandingPage() {
+
+  const [isOpenPopup, setisOpenPopup] = useState(false);
+  const [title, setTitle] = useState('');
+  const [description, setDescription] = useState('');
+  const [startDate, setStartDate] = useState(new Date());
+  const [endDate, setEndDate] = useState(new Date());
+  const handleOpenPopup = () => {
+    setisOpenPopup(!isOpenPopup);
+  }
+
   const assignedProjects = [
     {
       projectName: "Project1",
@@ -23,20 +38,25 @@ export default function LandingPage() {
     return (
       <Card className="add-project">
         <div className="cardContainer-addproject">
-          <NavLink to="/backlog" className="add-project-nav">
+          {/* <NavLink to="/backlog" className="add-project-nav"> */}
+          <div className="add-project-nav">
             <Card.Title className="ProjectName-addproject">
               New Project
             </Card.Title>
 
             <Card.ImgOverlay className="add-newproject">
               {/* <img src={add} alt="add" /> */}
-              <h1>+</h1>
+              <button onClick={handleOpenPopup}><h2>+</h2></button>
             </Card.ImgOverlay>
-          </NavLink>
+          </div>
+          {/* </NavLink> */}
         </div>
       </Card>
     );
   }
+
+
+
 
   function getCard(userId) {
     return (
@@ -75,18 +95,93 @@ export default function LandingPage() {
       </div>
     );
   }
+
+
+  const object={
+    "title":title,
+    "owner":"b761c65d-402e-4124-87e3-a0ead8bcb5d9",
+    "description":description,
+    "endDate": endDate,
+    "startDate":startDate
+  }
+
+  function handleAdd(){
+    postNewProject(object)
+    handleOpenPopup();
+  }
+
   return (
+
+
+
     <div className="LandingPage">
       <div className="LandingMainHeading">
         <h4>Your Work</h4>
       </div>
+
+      {isOpenPopup && (
+        <div className="popup">
+          <div className="popup-content">
+            <div className="add-new-project">
+              <div className="form-name">
+                <h3>Your Project</h3>
+              </div>
+              <form >
+                <label>Title of the project</label>
+                <input
+                  type="text"
+                  place="Enter title of the project"
+                  value={title}
+                  onChange={(e) => setTitle(e.target.value)}
+                />
+                <label>Description</label>
+                <input
+                  type="text"
+                  placeholder='Enter the description'
+                  value={description}
+                  onChange={(e) => setDescription(e.target.value)}
+                />
+
+                <div>
+
+                  <label >
+                    Start Date
+                  </label>
+                  <input 
+                    onChange={(e) => {
+                      setStartDate(e.target.value)
+                    }}
+                    placeholder="date placeholder"
+                    type="date"
+                  />
+
+                  <label>
+                    End Date
+                  </label>
+                  <input
+                    onChange={(e) => {
+                      setEndDate(e.target.value)
+                    }}
+                    placeholder="date placeholder"
+                    type="date"
+                  />
+                </div>
+                <div className="button">
+                <NavLink className="add-project-nav"><button onClick={handleOpenPopup}>Cancel</button></NavLink> 
+                  <NavLink to="/backlog" className="add-project-nav"><button onClick={handleAdd}>Add</button></NavLink>
+                  
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+      )}
       <div className="RecentProjectSection">
         <div className="LandingSubHeading">
-          {/* total projects that the user is enrolled in */}
           <span className="recentProjectHeading">Recent Projects</span>
           <span className="viewProjects">View all projects</span>
         </div>
-        {/* user Cards run a loop */}
         <div className="RecentProjectsCards">
           <div>{createCard(0)}</div>
           <div className="all-recent-project">

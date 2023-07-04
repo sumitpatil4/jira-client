@@ -129,8 +129,8 @@ const IssueForm = (props) => {
                 </div>
                 </div>
                 <div className="linkissue-button">
-                <button className="linkcreate-button">Create</button>
-                <button className="linkcancel-button">Cancel</button>
+                <button className="linkcreate-button" onClick={()=>{setLinkIssue()}}>Create</button>
+                <button className="linkcancel-button" onClick={()=>{setLinkIssue()}}>Cancel</button>
                 </div>
                 </div> }
             <div className="comment">
