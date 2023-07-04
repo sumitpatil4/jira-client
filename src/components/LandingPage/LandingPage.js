@@ -3,7 +3,6 @@ import Card from "react-bootstrap/Card";
 import add from "../../Images/add.png";
 import "./LandingPage.css";
 import { Label, Input } from "reactstrap";
-import DatePicker from "react-datepicker";
 import { NavLink } from "react-router-dom";
 import { MdOutlinePending } from 'react-icons/md';
 import toDoIcon from "../../Images/task.png"
@@ -148,7 +147,7 @@ export default function LandingPage() {
                   <label >
                     Start Date
                   </label>
-                  <Input 
+                  <input 
                     onChange={(e) => {
                       setStartDate(e.target.value)
                     }}
@@ -159,7 +158,7 @@ export default function LandingPage() {
                   <label>
                     End Date
                   </label>
-                  <Input
+                  <input
                     onChange={(e) => {
                       setEndDate(e.target.value)
                     }}
