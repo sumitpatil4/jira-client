@@ -1,7 +1,7 @@
 import './AddPeople.css';
-const AddPeople = () => {
-
+const AddPeople = (props) => {
     return ( 
+        
         <div className="add-people">
             <div className="form-name">
                 <h3>Add people</h3>
@@ -21,8 +21,8 @@ const AddPeople = () => {
                         <option value="users">Users</option>
                     </select>
                 <div className="button">
-                    <button>Cancel</button>
-                    <button>Add</button>
+                    <button onClick={()=>props.x()}>Cancel</button>
+                    <button onClick={()=>props.x()}>Add</button>
                 </div>
             </form>
         </div>
