@@ -168,8 +168,9 @@ export default function LandingPage() {
                   />
                 </div>
                 <div className="button">
-                  <button>Cancel</button>
-                  <button onClick={handleAdd}>Add</button>
+                <NavLink className="add-project-nav"><button onClick={handleOpenPopup}>Cancel</button></NavLink> 
+                  <NavLink to="/backlog" className="add-project-nav"><button onClick={handleAdd}>Add</button></NavLink>
+                  
                 </div>
               </form>
             </div>
