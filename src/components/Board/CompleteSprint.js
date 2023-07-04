@@ -1,5 +1,5 @@
 import './CompleteSprint.css'
-const CompleteSprint = () => {
+const CompleteSprint = (props) => {
     return (  
         <div className="completesprint">
         <div className='sprint-para'>
@@ -21,9 +21,13 @@ const CompleteSprint = () => {
             </div>
             <div className="button">
                 <div className="completebut">
-                <button className="complete-button">Complete sprint</button>
+                <button className="complete-button" onClick={()=>{
+                        props.x()
+                }}>Complete sprint</button>
                 </div>
-                <div className="cancelbut"> <button>Cancel</button></div>
+                <div className="cancelbut" onClick={()=>{
+                    props.x()
+                }}> <button>Cancel</button></div>
             </div>
         </form>
         </div>
